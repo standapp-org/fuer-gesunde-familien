@@ -2,7 +2,7 @@
 return [
     'BE' => [
         'debug' => false,
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$NzRVUi5RblNvUGFROWYwMw$1XVk3b52wNI/PZ3y9Rk8TdUG1ojEkSRD30p7IOkR8Bc',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$bnhhTkZWRlNXNzNZNjNLZw$g7AsX1/SX4VqrIQUyVmN/dcaCRcfGiSTP+xhzbu4zKc',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -12,16 +12,11 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8mb4',
-                'dbname' => 'db',
                 'driver' => 'mysqli',
-                'host' => 'db',
-                'password' => 'db',
-                'port' => 3306,
                 'tableoptions' => [
                     'charset' => 'utf8mb4',
                     'collate' => 'utf8mb4_unicode_ci',
                 ],
-                'user' => 'db',
             ],
         ],
     ],
@@ -72,7 +67,11 @@ return [
         ],
     ],
     'FE' => [
+        'cacheHash' => [
+            'enforceValidation' => true,
+        ],
         'debug' => false,
+        'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -84,7 +83,7 @@ return [
         'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
-        'processor_path' => '/usr/bin/',
+        'processor_path' => '/usr/local/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -103,13 +102,14 @@ return [
     ],
     'MAIL' => [
         'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025',
+        'transport_sendmail_command' => '/usr/sbin/sendmail -t -i',
         'transport_smtp_encrypt' => '',
         'transport_smtp_password' => '',
         'transport_smtp_server' => '',
         'transport_smtp_username' => '',
     ],
     'SYS' => [
+        'UTF8filesystem' => true,
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
@@ -137,12 +137,15 @@ return [
         ],
         'devIPmask' => '',
         'displayErrors' => 0,
-        'encryptionKey' => '746e6c8b586059be4232b47f381e1a662f07da6d2fc67c36f258faa9da1edc5f55be9c3cb4f5fbe179354a7603449052',
+        'encryptionKey' => '356eec6a18fb26be1622ab4e082d1939a164d419a6865c28813585477cda7ea272a57b55ebfe0821fcba7b9f7aaf6b50',
         'exceptionalErrors' => 4096,
+        'features' => [
+            'security.backend.enforceContentSecurityPolicy' => true,
+            'security.usePasswordPolicyForFrontendUsers' => true,
+        ],
         'sitename' => 'Für gesunde Familien',
         'systemMaintainers' => [
             1,
         ],
-        'trustedHostsPattern' => '.*.*',
     ],
 ];
