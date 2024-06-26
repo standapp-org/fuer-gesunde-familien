@@ -26,22 +26,22 @@ class Database
     /**
      * @var string
      */
-    protected string $username;
+    protected  $username;
 
     /**
      * @var string
      */
-    protected string $password;
+    protected  $password;
 
     /**
      * @var string
      */
-    protected string $port;
+    protected  $port;
 
     /**
      * @var string
      */
-    protected string $databaseName;
+    protected  $databaseName;
 
     /**
      * @var resource
@@ -424,34 +424,26 @@ class Database
         die($errorMessage . '<br/>' . PHP_EOL . $msgPhpError . PHP_EOL);
     }
 
-    /**
-     * @return string
-     */
-    public function getDatabaseName()
+
+    public function getDatabaseName():string
     {
         return $this->databaseName;
     }
 
-    /**
-     * @return string
-     */
-    public function getPort()
+
+    public function getPort():string
     {
         return $this->port;
     }
 
-    /**
-     * @return string
-     */
-    public function getPassword()
+
+    public function getPassword():string
     {
         return $this->password;
     }
 
-    /**
-     * @return string
-     */
-    public function getUsername()
+
+    public function getUsername():string
     {
         return $this->username;
     }

@@ -181,3 +181,5 @@ $dbTarget->update(
 );
 $dbTarget->update('pages', ['slug' => '/home'], ['uid' => '7']);
 $dbTarget->update('pages', ['slug' => '/zugang-life-archivech'], ['uid' => '21']);
+$dbTarget->update('pages', ['slug' => '/anmeldung-hli-tagung-2023'], ['uid' => '63']);
+$dbTarget->update('pages', ['slug' => '/impressum-kontakt'], ['uid' => '3']);
