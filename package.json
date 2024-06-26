@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "type": "module",
+  "lint-staged": {
+    "*.php": "php apps/web-app/vendor/bin/pint --config apps/web-app/pint.json"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.22.2",
+    "prettier": "^3.2.5"
+  }
+}
