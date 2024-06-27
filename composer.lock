@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e509b2a1513df06b86c87a5039aa0e47",
+    "content-hash": "a6cd6b25489ee3ca13155e78f8a329c2",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1564,6 +1564,122 @@
                 }
             ],
             "time": "2024-02-06T17:48:27+00:00"
+        },
+        {
+            "name": "in2code/powermail",
+            "version": "12.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/in2code-de/powermail.git",
+                "reference": "24853e38528dd565cd4834b74cfa677308e8abaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/in2code-de/powermail/zipball/24853e38528dd565cd4834b74cfa677308e8abaa",
+                "reference": "24853e38528dd565cd4834b74cfa677308e8abaa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-fileinfo": "*",
+                "ext-gd": "*",
+                "ext-json": "*",
+                "php": "^8.1",
+                "typo3/cms-core": "^12.4"
+            },
+            "replace": {
+                "typo3-ter/powermail": "self.version"
+            },
+            "require-dev": {
+                "behat/behat": "^3.8",
+                "behat/mink-selenium2-driver": "^1.5",
+                "drevops/behat-screenshot": "^1.1",
+                "friends-of-behat/mink-browserkit-driver": "^1.5",
+                "friends-of-behat/mink-extension": "^2.5",
+                "friendsofphp/php-cs-fixer": "^3.10",
+                "helhum/typo3-console": "^8.0.x-dev",
+                "helmich/typo3-typoscript-lint": "^3.1",
+                "mikey179/vfsstream": "^1.6",
+                "phpmd/phpmd": "^2.8",
+                "se/selenium-server-standalone": "^3.141",
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/config": "^6.2",
+                "typo3/cms-adminpanel": "^12.4",
+                "typo3/cms-belog": "^12.4",
+                "typo3/cms-beuser": "^12.4",
+                "typo3/cms-dashboard": "^12.4",
+                "typo3/cms-extbase": "^12.4",
+                "typo3/cms-extensionmanager": "^12.4",
+                "typo3/cms-felogin": "^12.4",
+                "typo3/cms-filelist": "^12.4",
+                "typo3/cms-fluid-styled-content": "^12.4",
+                "typo3/cms-frontend": "^12.4",
+                "typo3/cms-info": "^12.4",
+                "typo3/cms-install": "^12.4",
+                "typo3/cms-lowlevel": "^12.4",
+                "typo3/cms-recordlist": "^12.4",
+                "typo3/cms-rte-ckeditor": "^12.4",
+                "typo3/cms-scheduler": "^12.4",
+                "typo3/cms-setup": "^12.4",
+                "typo3/cms-t3editor": "^12.4",
+                "typo3/cms-tstemplate": "^12.4",
+                "typo3/testing-framework": "^8.0"
+            },
+            "suggest": {
+                "jambagecom/base-excel": "^v1.29.0",
+                "sjbr/static-info-tables": "*"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".build/public",
+                    "extension-key": "powermail",
+                    "ignore-as-root": false
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "In2code\\Powermail\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Busemann",
+                    "email": "stefan.busemann@in2code.de",
+                    "homepage": "https://www.in2code.de",
+                    "role": "Update Manager"
+                },
+                {
+                    "name": "Alex Kellner",
+                    "email": "alexander.kellner@in2code.de",
+                    "homepage": "https://www.in2code.de",
+                    "role": "Product owner, Technical owner"
+                },
+                {
+                    "name": "Marcus Schwemer",
+                    "email": "marcus.schwemer@in2code.de",
+                    "homepage": "https://www.in2code.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Powermail is a well-known, editor-friendly, powerful and easy to use mailform extension for TYPO3 with a lots of features",
+            "homepage": "https://github.com/einpraegsam/powermail",
+            "keywords": [
+                "form",
+                "mailform",
+                "spamprevention",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/in2code-de/powermail/issues",
+                "source": "https://github.com/in2code-de/powermail/tree/12.3.5"
+            },
+            "time": "2024-06-07T14:55:24+00:00"
         },
         {
             "name": "lolli42/finediff",
@@ -7622,7 +7738,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "lpc/lpc_base": 20,
         "lpc/petition": 20,
         "tc/site-package": 20
     },
