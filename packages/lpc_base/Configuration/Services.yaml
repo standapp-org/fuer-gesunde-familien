@@ -1,0 +1,36 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  LPC\LpcBase\:
+    resource: '../Classes/*'
+
+  LPC\LpcBase\Configuration\PluginRegistry:
+    tags:
+      - name: event.listener
+        method: registerTca
+        event: TYPO3\CMS\Core\Configuration\Event\AfterTcaCompilationEvent
+      - name: event.listener
+        method: appendPluginIcons
+        event: TYPO3\CMS\Core\Core\Event\BootCompletedEvent
+      - name: event.listener
+        method: modifyWizardItems
+
+  LPC\LpcBase\Hook\SingleFileFormManipulation:
+    tags:
+      - name: event.listener
+
+  LPC\LpcBase\Utility\ControllerActionHandler:
+    public: true
+
+  LPC\LpcBase\Configuration\FrontendUriBuilder:
+    public: true
+    shared: false
+
+  LPC\LpcBase\Configuration\BackendConfigurationManager:
+    public: true
+    arguments:
+      $typoScriptCache: '@cache.typoscript'
+      $runtimeCache: '@cache.runtime'

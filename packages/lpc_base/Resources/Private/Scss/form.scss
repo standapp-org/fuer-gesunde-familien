@@ -1,0 +1,265 @@
+.lpcFormFunctional {
+	.lpcFormGroup {
+		&.mandatory > label:first-of-type:after {
+			content: '\a0*';
+			color: red;
+		}
+
+		&.error {
+			input, textarea, select {
+				border-color: #f99;
+			}
+			input[type=checkbox] {
+				outline:1px solid #f00;
+			}
+		}
+	}
+
+	.lpcFormError {
+		color:#f00;
+		margin:-0.2em 0 0.5em;
+		font-size:0.7em;
+		line-height:1.2em;
+	}
+}
+
+%form {
+	width:100%;
+	display: grid;
+	grid-template-columns: minmax(auto, 1fr) minmax(auto, 3fr);
+	gap: 0.4em 1em;
+	align-items: baseline;
+	container-type: inline-size;
+
+	> * {
+		grid-column: 1 / -1;
+	}
+
+	@media screen and (max-width: 800px) {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+
+%formGroup {
+	display: contents;
+	@extend %container;
+}
+
+%control {
+	border: 1px solid #aaa;
+	padding: 5px 8px;
+	margin: 0;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+
+%button {
+	flex-grow: 0;
+	width: auto;
+	font-size: 16px;
+	border: 1px solid #aaa;
+	padding: 5px 8px;
+	background: #eee;
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	display: inline-block;
+}
+
+%controls {
+	input {
+		@extend %control;
+
+		&[type="radio"] {
+			transform: scale(1.2) translateY(0.1em);
+			width: auto;
+		}
+		&[type="checkbox"] {
+			transform: scale(1.2) translateY(0.1em);
+			width: 1em;
+		}
+	}
+
+	textarea {
+		@extend %control;
+		resize: vertical;
+	}
+
+	select {
+		@extend %control;
+	}
+
+	button, input[type="submit"] {
+		@extend %button;
+	}
+}
+
+.lpcForm {
+	@extend %form;
+	@extend .lpcFormFunctional;
+
+	> .formSection {
+		display: contents;
+	}
+
+	&, > .formSection {
+		> * {
+			grid-column: 1 / -1;
+		}
+
+		> .lpcFormGroup {
+			@extend %formGroup;
+		}
+
+		> .lpcFormButtons,
+		> .lpcFormError {
+			@extend %container;
+			grid-column: 2;
+		}
+	}
+
+	.lpcFormGroup {
+		@extend %controls;
+
+		.cke, .cke_editable_inline {
+			border:1px solid #aaa;
+			min-height:3em;
+		}
+
+		.lpcFormInput {
+			@extend %control;
+
+			> * {
+				white-space: initial;
+			}
+		}
+
+		.lpcFormInputGroup {
+			padding: 0;
+			display: flex;
+
+			> input,
+			> select{
+				flex: auto 1 1;
+			}
+			> button {
+				flex: auto 0 0;
+			}
+			> input[type="checkbox"] {
+				flex: auto 0 0;
+				margin: 0.5em;
+			}
+		}
+
+		.lpcMatchCaptchaImage {
+			align-self: center;
+		}
+	}
+
+	.lpcFormGroup, .lpcFormButtons {
+		input[type="submit"], button {
+			@extend %button;
+		}
+	}
+
+	.lpcFormButtons.lpcFormButtons {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 0.4em;
+		margin-top: 0.4em;
+	}
+
+	.lpcFormButton,
+	.lpcFormButtons a:link {
+		@extend %button;
+	}
+}
+
+.frame-type-form_formframework > form {
+	@extend %form;
+
+	.form-group {
+		@extend %formGroup;
+		@extend %controls;
+
+		> div.input {
+			display: contents;
+		}
+	}
+
+	.form-check {
+		grid-column: 2;
+	}
+
+	.actions {
+		grid-column: 2;
+
+		input[type="submit"], button {
+			@extend %button;
+		}
+	}
+}
+
+.frame-type-felogin_login > form {
+	@extend %form;
+
+	fieldset {
+		display: contents;
+
+		> legend {
+			display: none;
+		}
+
+		> div {
+			@extend %formGroup;
+			@extend %controls;
+
+			&, > label {
+				display: contents;
+			}
+		}
+
+		input[type="submit"] {
+			grid-column: 2;
+			justify-self: start;
+			align-self: flex-start;
+		}
+	}
+}
+
+.tx-indexedsearch-searchbox > form {
+	@extend %form;
+
+	fieldset {
+		display: contents;
+
+		> legend {
+			display: none;
+		}
+
+		> div {
+			@extend %formGroup;
+			@extend %controls;
+
+			> input, > select {
+				grid-column: 2;
+			}
+
+			&.tx-indexedsearch-search-submit {
+				display: block;
+				grid-column: 2;
+			}
+		}
+	}
+}
+
+%container {
+	@container (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		grid-column: 1 / -1;
+	}
+}

@@ -1,0 +1,35 @@
+<div class="lpcPrivacyConsent">
+	<f:if condition="{heading}">
+		<h3>{heading}</h3>
+	</f:if>
+	<f:if condition="{intro}">
+		<f:format.html>{intro}</f:format.html>
+	</f:if>
+
+	<form>
+		<div class="options">
+			<f:for each="{options}" as="option">
+				<label class="consentOption">
+					<input type="checkbox" name="{option.inputName}" value="1" {f:if(condition: option.disabled, then: 'disabled')} {f:if(condition: option.checked, then: 'checked')} />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 10">
+						<path d="M5 0A5 5 0 0 0 5 10L15 10A5 5 0 0 0 15 0z" fill="#cccccc" />
+						<circle r="4" cx="5" cy="5" fill="#ffffff" />
+					</svg>
+					<span>{option.label}</span>
+				</label>
+			</f:for>
+		</div>
+
+		<div class="actions">
+			<f:if condition="{save} && {options -> f:count()} > 0">
+				<button class="save">{save}</button>
+			</f:if>
+			<f:if condition="{dismissAll}">
+				<button type="button" class="dismissAll">{dismissAll}</button>
+			</f:if>
+			<f:if condition="{acceptAll}">
+				<button type="button" class="acceptAll">{acceptAll}</button>
+			</f:if>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+		xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+		xmlns:lpc="http://typo3.org/ns/LPC/LpcBase/ViewHelpers"
+		xmlns:captcha="http://typo3.org/ns/LPC/Captcha/ViewHelpers">
+
+	<f:layout name="Default" />
+
+	<f:section name="Main">
+		<a name="tx-lpc-petition-anker"></a>
+
+		<f:form action="sign" objectName="entry" section="tx-lpc-petition-anker" method="post" class="petitionForm lpcForm" id="lpc-petition-form">
+			<f:for each="{fields}" key="property" as="field">
+				<lpc:form.group mandatory="{field.mandatory}" label="{field.name}">
+					<f:switch expression="{field.type}">
+						<f:case value="input">
+							<f:form.textfield property="{property}" title="{field.title}" />
+						</f:case>
+						<f:case value="textarea">
+							<f:form.textarea property="{property}" title="{field.title}" />
+						</f:case>
+						<f:case value="date">
+							<lpc:form.dateTime property="{property}" title="{field.title}" />
+						</f:case>
+						<f:case value="email">
+							<f:form.textfield property="{property}" title="{field.title}" type="email" />
+						</f:case>
+						<f:case value="select">
+							<f:form.select property="{property}" title="{field.title}" prependOptionLabel="">
+								<f:for each="{field.options}" as="option" key="value">
+									<f:form.select.option value="{value}" additionalAttributes="{f:if(condition: option.disabled, then: {disabled: 'disabled'})}">{option}</f:form.select.option>
+								</f:for>
+							</f:form.select>
+						</f:case>
+						<f:case value="checkbox">
+							<div class="lpcCheckbox" title="{field.title}">
+								<f:form.checkbox property="{property}" value="1" />
+							</div>
+						</f:case>
+						<f:case value="radios">
+							<div class="lpcCheckbox">
+								<div title="{field.title}">
+									<f:for each="{field.options}" as="option" key="value">
+										<label><f:form.radio property="{property}" value="{value}" /> {option}</label><br/>
+									</f:for>
+								</div>
+							</div>
+						</f:case>
+						<f:case value="checkboxes">
+							<div class="lpcCheckbox">
+								<div title="{field.title}">
+									<f:for each="{field.options}" as="option" key="value">
+										<label><f:form.checkbox property="{property}" value="{value}" multiple="1" /> {option}</label><br/>
+									</f:for>
+								</div>
+							</div>
+						</f:case>
+					</f:switch>
+				</lpc:form.group>
+			</f:for>
+
+			<captcha:formGroup labelKey="formLabel.captcha" type="{captcha}" name="captcha" />
+
+			<f:comment>
+			<f:if condition="{captcha}">
+				<lpc:form.group labelKey="formLabel.captcha">
+					<div><captcha:math name="captcha" fontsize="22" /></div>
+				</lpc:form.group>
+			</f:if>
+			</f:comment>
+
+			<div class="lpcFormButtons">
+				<div><f:form.button><f:translate key="formLabel.submit" /></f:form.button></div>
+			</div>
+
+		</f:form>
+
+	</f:section>
+
+	<f:section name="FooterAssets">
+		<script>
+			window.addEventListener('DOMContentLoaded', function() {
+				Array.prototype.forEach.call(document.querySelectorAll('.petitionForm input[type=checkbox]'), function(checkbox) {
+					var group = Array.prototype.filter.call(checkbox.form.elements[checkbox.name], (el) => el.type !== 'hidden');
+					if(group.length > 1) {
+						checkbox.addEventListener('change', function() {
+							var some = group.some((el) => el.checked);
+							group.forEach(function(el) {
+								el.required = !some;
+							});
+						});
+					}
+				});
+			});
+		</script>
+	</f:section>
+</html>

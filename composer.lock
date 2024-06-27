@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1be8a54acf6790f5a378b8185d9f91a",
+    "content-hash": "e509b2a1513df06b86c87a5039aa0e47",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1631,6 +1631,117 @@
             "time": "2024-02-06T13:56:20+00:00"
         },
         {
+            "name": "lpc/captcha",
+            "version": "0.0.1",
+            "dist": {
+                "type": "path",
+                "url": "./packages/lpc_captcha",
+                "reference": "013fd8055797e62df9cd4b323afb22fe180fc394"
+            },
+            "require": {
+                "php": ">=8.1",
+                "typo3/cms-core": "^12.4"
+            },
+            "replace": {
+                "lpc/captcha": "self.version",
+                "typo3-ter/lpc-captcha": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "lpc_captcha"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LPC\\Captcha\\": "Classes"
+                }
+            },
+            "description": "Captcha form protection",
+            "homepage": "https://www.laupercomputing.ch",
+            "keywords": [
+                "Captcha",
+                "Spamshield",
+                "TYPO3 CMS"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "lpc/lpc_base",
+            "version": "2.4.1",
+            "dist": {
+                "type": "path",
+                "url": "./packages/lpc_base",
+                "reference": "1cd65dc324dd7f4fa8d1e019352b70dfc5cbcee2"
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^2.0",
+                "typo3/cms-core": "^12.4 || ^11.5 || ^10.4 || ^9.5 || ^8.7"
+            },
+            "replace": {
+                "lpc/lpc_base": "self.version",
+                "typo3-ter/lpc-base": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "lpc_base"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LPC\\LpcBase\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "LPC base extension",
+            "homepage": "https://www.laupercomputing.ch",
+            "keywords": [
+                "TYPO3 CMS"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "lpc/petition",
+            "version": "12.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./packages/lpc_petition",
+                "reference": "bdb5c93fb092b90824af297eb5fc45cf675afb57"
+            },
+            "require": {
+                "lpc/captcha": "*",
+                "lpc/lpc_base": ">=2.4.1",
+                "sjbr/static-info-tables": "*",
+                "typo3/cms-core": "^12.4"
+            },
+            "replace": {
+                "lpc/petition": "self.version",
+                "typo3-ter/lpc-petition": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "lpc_petition"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LPC\\LpcPetition\\": "Classes"
+                }
+            },
+            "description": "Petition",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "masterminds/html5",
             "version": "2.9.0",
             "source": {
@@ -2621,6 +2732,69 @@
                 "source": "https://github.com/scssphp/scssphp/tree/v1.12.1"
             },
             "time": "2024-01-13T12:36:40+00:00"
+        },
+        {
+            "name": "sjbr/static-info-tables",
+            "version": "v12.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://codeberg.org/sjbr/static-info-tables",
+                "reference": "e4379319181210207dc25c6b5d4291cc352acb21"
+            },
+            "require": {
+                "typo3/cms-backend": ">=12.4, <13.0",
+                "typo3/cms-core": ">=12.4, <13.0",
+                "typo3/cms-extbase": ">=12.4, <13.0",
+                "typo3/cms-extensionmanager": ">=12.4, <13.0",
+                "typo3/cms-fluid": ">=12.4, <13.0",
+                "typo3/cms-frontend": ">=12.4, <13.0"
+            },
+            "replace": {
+                "typo3-ter/static-info-tables": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "static_info_tables"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SJBR\\StaticInfoTables\\": "Classes/"
+                },
+                "exclude-from-classmap": [
+                    "Classes/Domain/Model/Country",
+                    "Classes/Domain/Model/CountryZone",
+                    "Classes/Domain/Model/Currency",
+                    "Classes/Domain/Model/Language",
+                    "Classes/Domain/Model/Territory"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stanislas Rolland",
+                    "homepage": "https://www.sjbr.ca",
+                    "role": "Developer"
+                },
+                {
+                    "name": "René Fritz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Data and API for countries, languages and currencies for use in TYPO3 CMS.",
+            "homepage": "https://codeberg.org/sjbr/static-info-tables",
+            "keywords": [
+                "Static Info Tables",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://codeberg.org/sjbr/static-info-tables/issues"
+            },
+            "time": "2023-12-19T16:50:38+00:00"
         },
         {
             "name": "symfony/cache",
@@ -7448,6 +7622,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "lpc/lpc_base": 20,
+        "lpc/petition": 20,
         "tc/site-package": 20
     },
     "prefer-stable": false,

@@ -1,0 +1,13 @@
+
+recaptcha {
+	# cat=Captcha; type=string, label=Site Key for Google ReCaptcha
+	sitekey = 6Lfgx34UAAAAALm8yVdhwRc-jhtfCaG7JhW7OCJY
+	# cat=Captcha; type=string, label=Private Token for Site Key for Google ReCaptcha
+	sitekeyPrivate = 6Lfgx34UAAAAANv9-nIVHJuyq6xm02kH2Q3_LOeC
+}
+recaptchaInvisible {
+	# cat=Captcha; type=string, label=Site Key for invisible Google ReCaptcha
+	sitekey = 6Lcmy34UAAAAAD8lmZknW7gDvoIwAq_UIWj6HSfB
+	# cat=Captcha; type=string, label=Private Token for Site Key for invisible Google ReCaptcha
+	sitekeyPrivate = 6Lcmy34UAAAAANmyP49YPe44mAKdRAvkRmorLVys
+}

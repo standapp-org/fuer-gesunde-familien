@@ -1,0 +1,25 @@
+<f:translate key="notifyMail_body" arguments="{0:'{f:uri.page(absolute:1)}'}" />
+
+<p>
+	<f:for each="{fields}" key="field" as="mandatory">
+		<f:translate key="formLabel.{field}" arguments="{0:settings.organisationName}" />:
+		<f:switch expression="{field}">
+			<f:case value="newsletter">
+				<b><f:translate key="formLabel.newsletter.{entry.newsletter}" /></b>
+			</f:case>
+			<f:case value="private">
+				<b><f:translate key="formLabel.private.{entry.private}" /></b>
+			</f:case>
+			<f:case value="allowReuse">
+				<b><f:translate key="formLabel.allowReuse.{entry.allowReuse}" /></b>
+			</f:case>
+			<f:case value="comment">
+				<b>{entry.comment -> f:format.nl2br()}</b>
+			</f:case>
+			<f:case default="1">
+				<b>{entry.{field}}</b>
+			</f:case>
+		</f:switch>
+		<br/>
+	</f:for>
+</p>

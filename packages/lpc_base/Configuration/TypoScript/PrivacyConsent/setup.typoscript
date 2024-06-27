@@ -1,0 +1,13 @@
+lib.privacyConsent = FLUIDTEMPLATE
+lib.privacyConsent {
+	file = EXT:lpc_base/Resources/Private/Templates/PrivacyConsent.html
+	dataProcessing.10 = LPC\LpcBase\DataProcessing\PrivacyConsentProcessor
+	variables {
+		intro = TEXT
+		intro.value = Diese Website nutzt Cookies. Durch die weitere Nutzung der Site stimmen Sie deren Verwendung zu und akzeptieren unsere Datenschutzrichtlinien.
+		intro.lang.fr = Ce site web utilise des cookies. Par la navigation que vous y poursuivez, vous en acceptez l'utilisation et donnez votre consentement avec notre politique de protection des données.
+		acceptAll = TEXT
+		acceptAll.value = Einverstanden
+		acceptAll.lang.fr = Accepter
+	}
+}

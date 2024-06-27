@@ -1,0 +1,15 @@
+page {
+	includeCSS.lpcForm = EXT:lpc_base/Resources/Public/CSS/form.css
+	includeCSS.lpcFlashMessages = EXT:lpc_base/Resources/Public/CSS/messages.css
+}
+
+plugin.tx_lpcbase.settings {
+	rteDefaultContentCSS =
+}
+
+config.pageTitleProviders {
+	lpcBase {
+		provider = LPC\LpcBase\Utility\PluginUtility
+		before = record, seo
+	}
+}

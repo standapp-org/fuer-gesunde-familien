@@ -1,0 +1,71 @@
+
+.lpcFilterButtons {
+	display: flex;
+	align-items: baseline;
+	gap: 0.5em;
+}
+
+.lpcFilterButtons .buttons {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 0.3em 0.5em;
+}
+
+.lpcFilterButtons button {
+	background-color: var(--lpc-filter-bg-color, #6aa4b1);
+	color: var(--lpc-filter-fg-color, #ffffff);
+	border: none;
+	outline: none;
+	font-size: 1em;
+	line-height: 1em;
+	padding: 0.3em 0.6em 0.2em;
+	cursor: pointer;
+}
+.lpcFilterButtons button.active {
+	background-color: var(--lpc-filter-active-bg-color, #000000);
+	color: var(--lpc-filter-active-fg-color, #ffffff);
+}
+
+.lpcFilterButtonsAligned {
+	display: table;
+}
+.lpcFilterButtonsAligned .lpcFilterButtons {
+	display: table-row;
+}
+.lpcFilterButtonsAligned .lpcFilterButtons > * {
+	display: table-cell;
+	vertical-align: baseline;
+}
+.lpcFilterButtonsAligned .lpcFilterButtons > .label {
+	white-space: nowrap;
+}
+
+.lpcFilterPagination {
+	display: flex;
+	gap: 0.5rem;
+	user-select: none;
+}
+
+.lpcFilterPagination span {
+	line-height: 1.4em;
+	min-width: 1.4em;
+	background-color: var(--lpc-filter-bg-color, #6aa4b1);
+	color: var(--lpc-filter-fg-color, #ffffff);
+	cursor: pointer;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.lpcFilterPagination span.current {
+	background-color: var(--lpc-filter-active-bg-color, #000000);
+	color: var(--lpc-filter-active-fg-color, #ffffff);
+	cursor: initial;
+}
+
+.lpcFilterPagination span.previous:before {
+	content: '<';
+}
+
+.lpcFilterPagination span.next:before {
+	content: '>';
+}

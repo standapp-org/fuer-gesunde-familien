@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="messages" product-name="lpc_petition">
+		<header/>
+		<body>
+			<trans-unit id="formLabel.firstname">
+				<source>Vorname</source>
+				<target>Prénom</target>
+			</trans-unit>
+			<trans-unit id="formLabel.lastname">
+				<source>Nachname</source>
+				<target>Nom</target>
+			</trans-unit>
+			<trans-unit id="formLabel.address">
+				<source>Adresse</source>
+				<target>Adresse</target>
+			</trans-unit>
+			<trans-unit id="formLabel.zip">
+				<source>PLZ</source>
+				<target>NPA</target>
+			</trans-unit>
+			<trans-unit id="formLabel.place">
+				<source>Ort</source>
+				<target>Lieu</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country">
+				<source>Land</source>
+				<target>Pays</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.CH">
+				<source>Schweiz</source>
+				<target>Suisse</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.DE">
+				<source>Deutschland</source>
+				<target>Allemagne</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.AT">
+				<source>Österreich</source>
+				<target>Autriche</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.IT">
+				<source>Italien</source>
+				<target>Italie</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.FR">
+				<source>Frankreich</source>
+				<target>France</target>
+			</trans-unit>
+			<trans-unit id="formLabel.country.LI">
+				<source>Liechtenstein</source>
+				<target>Liechtenstein</target>
+			</trans-unit>
+			<trans-unit id="formLabel.mail">
+				<source>Mail</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="formLabel.title">
+				<source>Titel / Beruf</source>
+				<target>Titre/profession</target>
+			</trans-unit>
+			<trans-unit id="formLabel.birthday">
+				<source>Geburtstag</source>
+				<target>Date de naissance</target>
+			</trans-unit>
+			<trans-unit id="formLabel.private">
+				<source>Meinen Namen auf dieser Homepage sichtbar machen?</source>
+				<target>Faire figurer mon nom sur ce site?</target>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter">
+				<source>Newsletter abonnieren</source>
+				<target>abonner la newsletter</target>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter.0">
+				<source>Nein</source>
+				<target>Non</target>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter.1">
+				<source>Ja</source>
+				<target>Oui</target>
+			</trans-unit>
+			<trans-unit id="formLabel.private.0">
+				<source>Ja</source>
+				<target>Oui</target>
+			</trans-unit>
+			<trans-unit id="formLabel.private.1">
+				<source>Nein</source>
+				<target>Non</target>
+			</trans-unit>
+			<trans-unit id="formLabel.allowReuse">
+				<source>Adresse darf durch die Organisation %s weiterverwendet werden</source>
+				<target>Mon adresse peut être utilisée à d'autres fins par l'organisation</target>
+			</trans-unit>
+			<trans-unit id="formLabel.allowReuse.0">
+				<source>Nein</source>
+				<target>Non</target>
+			</trans-unit>
+			<trans-unit id="formLabel.allowReuse.1">
+				<source>Ja</source>
+				<target>Oui</target>
+			</trans-unit>
+			<trans-unit id="form.explainAllowReuse">
+				<source>Ja bedeutet: Ich habe nichts dagegen, wenn ich in Zukunft (ohne Kostenfolgen) für thematisch ähnliche Aktionen angeschrieben werde. Ihre Adresse wird darüber hinaus keinerlei Dritten weitergegeben.</source>
+				<target>Oui signifie: je me déclare d'accord de recevoir à l'avenir (sans être facturé) des courriers sur des efforts touchant des sujets semblables. Votre adresse ne sera pas transmise à des tiers.</target>
+			</trans-unit>
+			<trans-unit id="formLabel.submit">
+				<source>Absenden</source>
+				<target>envoyer</target>
+			</trans-unit>
+			<trans-unit id="formLabel.captcha">
+				<source>Spamschutz</source>
+				<target>Protection anti-spam</target>
+			</trans-unit>
+			<trans-unit id="list.emptylist">
+				<source>Noch keine Einträge vorhanden</source>
+				<target>Encore sans aucune saisie</target>
+			</trans-unit>
+			<trans-unit id="list.totalEntries">
+				<source>Gesamtzahl Online-Unterschriften: %d</source>
+				<target>Total des signatures en ligne: %d</target>
+			</trans-unit>
+			<trans-unit id="list.charRepo.tab.new">
+				<source>Neueste</source>
+				<target>d'actualité</target>
+			</trans-unit>
+			<trans-unit id="form.mail_test.infotext">
+				<source>Zu dieser Petition hat sich bereits eine oder mehrere Personen mit Ihrer Mail-Adresse eingeschrieben. Sind Sie sicher, dass sie sich für diese Petition noch nicht eingeschrieben haben? 
+Folgend sind alle öffentlichen Einschreibungen, die auf Ihrer Mail Adresse lauten, angezeigt. Falls Sie sich nicht öffentlich eingeschrieben haben, ist die totale Anzahl Einschreibungen (inkl. versteckte Einschreibungen) ersichtlich.</source>
+				<target>Une ou plusieurs personnes se sont déjà inscrites à cette pétition avec votre courriel. Etes-vous certain/e que vous ne vous êtes pas déjà inscrit/e par ce mail?  
+Vous visualisez ci-après toutes les inscriptions publiées se rapportant à votre mail. Au cas où vous ne vous seriez pas déjà inscrit/e publiquement, le nombre total des inscriptions correspond au total des inscriptions visualisées (y c. celles cachées). </target>
+			</trans-unit>
+			<trans-unit id="form.mail_test.totalFoundWithPrivate">
+				<source>Anzahl Adressen (inkl. versteckte)</source>
+				<target>Nombre d'adresse (y c. les cachées)</target>
+			</trans-unit>
+			<trans-unit id="form.mail_test.confirm">
+				<source>Trotzdem einschreiben</source>
+				<target>inscrire tout de même </target>
+			</trans-unit>
+			<trans-unit id="form.mail_test.cancel">
+				<source>Abbrechen</source>
+				<target>Interrompre</target>
+			</trans-unit>
+			<trans-unit id="submit_button_label">
+				<source>Klick hier um die Daten abzuschicken</source>
+				<target>Cliquez ici pour envoyer les données</target>
+			</trans-unit>
+			<trans-unit id="submit_thanks_text_title">
+				<source>Vielen Dank für Ihre Unterstützung!</source>
+				<target>Merci pour votre soutien!</target>
+			</trans-unit>
+			<trans-unit id="submit_thanks_text">
+				<source>Ihre Daten wurden erfolgreich erfasst.</source>
+				<target>Vos données ont été saisies avec succès. </target>
+			</trans-unit>
+			<trans-unit id="submit_thanks_text_doubleoptin">
+				<source>Sie werden ein E-Mail mit einem Bestätigungslink erhalten. Bitte klicken Sie auf jenen Link.</source>
+				<target>Vous allez recevoir un e-mail avec un lien de confirmation. Veuillez cliquer sur ce lien. </target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_subject">
+				<source>Bitte Bestätigen: Ihre Unterzeichnung der Petition</source>
+				<target>Veuillez confirmer votre signature à la pétition </target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_body_intro">
+				<source>Herzlichen Dank für das Unterschreiben der Petition.</source>
+				<target>Merci de signer la pétition.</target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_salutation">
+				<source>Guten Tag %s</source>
+				<target>Bonjour %s</target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_explanation">
+				<source>Bitte bestätigen Sie durch Klick auf den folgenden Link Ihre Unterzeichnung und Ihre Mail-Adresse:</source>
+				<target>Veuillez confirmer en cliquant sur le lien suivant votre signature et votre adresse mail:</target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_link_text">
+				<source>Unterschrift bestätigen</source>
+				<target>confirmez votre signature</target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_regards">
+				<source>Herzlichen Dank und freundliche Grüsse!</source>
+				<target>Grand merci et cordiales salutations!</target>
+			</trans-unit>
+			<trans-unit id="mail_doubleoption_ps_plain">
+				<source>PS: Sie können den Link auch in das Adress-Fenster Ihres Browsers kopieren.</source>
+				<target>PS: vous pouvez aussi copier le lien dans la fenêtre de votre navigateur.</target>
+			</trans-unit>
+			<trans-unit id="doubleoptin_success">
+				<source>Ihre Eingabe wurde erfolgreich bestätigt. Vielen Dank.</source>
+				<target>Votre saisie a été confirmée avec succès; merci! </target>
+			</trans-unit>
+			<trans-unit id="doubleoptin_fail_title">
+				<source>Fehler</source>
+				<target>erreur</target>
+			</trans-unit>
+			<trans-unit id="doubleoptin_fail">
+				<source>Der aufgerufene Link ist ungültig oder wurde bereits verwendet.</source>
+				<target>Le lien activé n'est soit plus valable, soit déjà utilisé. </target>
+			</trans-unit>
+			<trans-unit id="notifyMail_subject">
+				<source>Neue Petition erfasst</source>
+				<target>Nouvelle pétition saisie</target>
+			</trans-unit>
+			<trans-unit id="notifyMail_body">
+				<source>Folgende neue Petition wurde auf %s erfasst.</source>
+				<target>La nouvelle pétition suivante a été saisie sur %s .</target>
+			</trans-unit>
+			<trans-unit id="mandatoryFieldError">
+				<source>Dies ist ein Pflichtfeld</source>
+				<target>Cette case doit être impérativement remplie</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

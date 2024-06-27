@@ -21,6 +21,7 @@
 	],
 	"require": {
 		"helhum/typo3-console": "^8.1",
+		"lpc/petition": "@dev",
 		"tc/site-package": "@dev",
 		"typo3/cms-backend": "^12.4.0",
 		"typo3/cms-belog": "^12.4.0",

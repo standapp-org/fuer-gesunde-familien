@@ -1,0 +1,59 @@
+plugin.tx_lpcpetition {
+
+    _CSS_DEFAULT_STYLE (
+      .tx-lpc-petition form.petitionForm .errorForm { color: red; margin: 6px 0; font-weight: bold; }
+      .tx-lpc-petition form.petitionForm .colLeft { width:280px; float:left; clear: both;}
+      .tx-lpc-petition form.petitionForm .colRight { clear:none; float:left; }
+
+      .tx-lpc-petition .ff-mandatory { font-weight: bold; }
+      .tx-lpc-petition .ff-mandatory::after { content: "*"; }
+      .tx-lpc-petition .ff-error { color: red; }
+      .tx-lpc-petition input[type="submit"] { margin-top: 15px; }
+
+      .tx-lpc-petition table th { text-align: left; }
+      .tx-lpc-petition table tr:nth-child(even) { background: #E0E0E0; }
+      .tx-lpc-petition table tr:nth-child(odd) {  }
+      .tx-lpc-petition table td { width: 150px; }
+
+      .tx-lpc-petition .empty-list { clear: both; font-style: italic; padding: 0 30px; }
+      .tx-lpc-petition .infoAmountOfEntries {  }
+      .tx-lpc-petition .char-repo { clear: both; }
+      .tx-lpc-petition .char-repo div { float: left; padding: 3px; margin: 0 1px;}
+      .tx-lpc-petition .char-repo div.char-repo-entry-enabled { font-weight: bold; cursor: pointer; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+      .tx-lpc-petition .char-repo div.char-repo-entry-enabled:hover { background-color: #E0E0E0; }
+      .tx-lpc-petition .char-repo div.active { background-color: #E0E0E0; }
+      .tx-lpc-petition .char-repo div.char-repo-entry-disabled { font-style: italic; color: #C0C0C0; cursor: default; }
+
+      .tx-lpc-petition .char-repo-container { padding-top: 10px; }
+      .tx-lpc-petition .char-repo-container th,
+      .tx-lpc-petition .char-repo-container td { padding: 0 5px; }
+
+      .tx-lpc-petition .petitionInfo {
+        background-color: #fea;
+        border: 1px solid #dc8;
+        padding: 5px 8px;
+        border-radius: 4px;
+        color: #430;
+      }
+
+      .tx-lpc-petition .petitionSuccess {
+        background-color: #cfc;
+        border: 1px solid #9d9;
+        padding: 5px 8px;
+        border-radius: 4px;
+        color: #151;
+      }
+
+      .tx-lpc-petition .petitionError {
+        background-color: #fdd;
+        border: 1px solid #daa;
+        padding: 5px 8px;
+        border-radius: 4px;
+        color: #411;
+      }
+    )
+
+    persistence.storagePid.data = page:uid
+}
+
+page.includeCSS.lpc_form = EXT:lpc_petition/Resources/Public/CSS/lpc_form.css

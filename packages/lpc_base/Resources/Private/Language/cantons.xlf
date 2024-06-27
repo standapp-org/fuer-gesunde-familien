@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="lpc_base">
+		<header/>
+		<body>
+			<trans-unit id="ZH">
+				<source>Zürich</source>
+			</trans-unit>
+			<trans-unit id="BE">
+				<source>Bern</source>
+			</trans-unit>
+			<trans-unit id="LU">
+				<source>Luzern</source>
+			</trans-unit>
+			<trans-unit id="UR">
+				<source>Uri</source>
+			</trans-unit>
+			<trans-unit id="SZ">
+				<source>Schwyz</source>
+			</trans-unit>
+			<trans-unit id="OW">
+				<source>Obwalden</source>
+			</trans-unit>
+			<trans-unit id="NW">
+				<source>Nidwalden</source>
+			</trans-unit>
+			<trans-unit id="GL">
+				<source>Glarus</source>
+			</trans-unit>
+			<trans-unit id="ZG">
+				<source>Zug</source>
+			</trans-unit>
+			<trans-unit id="FR">
+				<source>Freiburg</source>
+			</trans-unit>
+			<trans-unit id="SO">
+				<source>Solothurn</source>
+			</trans-unit>
+			<trans-unit id="BS">
+				<source>Basel-Stadt</source>
+			</trans-unit>
+			<trans-unit id="BL">
+				<source>Basel-Landschaft</source>
+			</trans-unit>
+			<trans-unit id="SH">
+				<source>Schaffhausen</source>
+			</trans-unit>
+			<trans-unit id="AR">
+				<source>Appenzell Ausserrhoden</source>
+			</trans-unit>
+			<trans-unit id="AI">
+				<source>Appenzell Innerrhoden</source>
+			</trans-unit>
+			<trans-unit id="SG">
+				<source>St. Gallen</source>
+			</trans-unit>
+			<trans-unit id="GR">
+				<source>Graubünden</source>
+			</trans-unit>
+			<trans-unit id="AG">
+				<source>Aargau</source>
+			</trans-unit>
+			<trans-unit id="TG">
+				<source>Thurgau</source>
+			</trans-unit>
+			<trans-unit id="TI">
+				<source>Tessin</source>
+			</trans-unit>
+			<trans-unit id="VD">
+				<source>Waadt</source>
+			</trans-unit>
+			<trans-unit id="VS">
+				<source>Wallis</source>
+			</trans-unit>
+			<trans-unit id="NE">
+				<source>Neuenburg</source>
+			</trans-unit>
+			<trans-unit id="GE">
+				<source>Genf</source>
+			</trans-unit>
+			<trans-unit id="JU">
+				<source>Jura</source>
+			</trans-unit>
+			<trans-unit id="cantonZH">
+				<source>Kanton Zürich</source>
+			</trans-unit>
+			<trans-unit id="cantonBE">
+				<source>Kanton Bern</source>
+			</trans-unit>
+			<trans-unit id="cantonLU">
+				<source>Kanton Luzern</source>
+			</trans-unit>
+			<trans-unit id="cantonUR">
+				<source>Kanton Uri</source>
+			</trans-unit>
+			<trans-unit id="cantonSZ">
+				<source>Kanton Schwyz</source>
+			</trans-unit>
+			<trans-unit id="cantonOW">
+				<source>Kanton Obwalden</source>
+			</trans-unit>
+			<trans-unit id="cantonNW">
+				<source>Kanton Nidwalden</source>
+			</trans-unit>
+			<trans-unit id="cantonGL">
+				<source>Kanton Glarus</source>
+			</trans-unit>
+			<trans-unit id="cantonZG">
+				<source>Kanton Zug</source>
+			</trans-unit>
+			<trans-unit id="cantonFR">
+				<source>Kanton Freiburg</source>
+			</trans-unit>
+			<trans-unit id="cantonSO">
+				<source>Kanton Solothurn</source>
+			</trans-unit>
+			<trans-unit id="cantonBS">
+				<source>Kanton Basel-Stadt</source>
+			</trans-unit>
+			<trans-unit id="cantonBL">
+				<source>Kanton Basel-Landschaft</source>
+			</trans-unit>
+			<trans-unit id="cantonSH">
+				<source>Kanton Schaffhausen</source>
+			</trans-unit>
+			<trans-unit id="cantonAR">
+				<source>Kanton Appenzell Ausserrhoden</source>
+			</trans-unit>
+			<trans-unit id="cantonAI">
+				<source>Kanton Appenzell Innerrhoden</source>
+			</trans-unit>
+			<trans-unit id="cantonSG">
+				<source>Kanton St. Gallen</source>
+			</trans-unit>
+			<trans-unit id="cantonGR">
+				<source>Kanton Graubünden</source>
+			</trans-unit>
+			<trans-unit id="cantonAG">
+				<source>Kanton Aargau</source>
+			</trans-unit>
+			<trans-unit id="cantonTG">
+				<source>Kanton Thurgau</source>
+			</trans-unit>
+			<trans-unit id="cantonTI">
+				<source>Kanton Tessin</source>
+			</trans-unit>
+			<trans-unit id="cantonVD">
+				<source>Kanton Waadt</source>
+			</trans-unit>
+			<trans-unit id="cantonVS">
+				<source>Kanton Wallis</source>
+			</trans-unit>
+			<trans-unit id="cantonNE">
+				<source>Kanton Neuenburg</source>
+			</trans-unit>
+			<trans-unit id="cantonGE">
+				<source>Kanton Genf</source>
+			</trans-unit>
+			<trans-unit id="cantonJU">
+				<source>Kanton Jura</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+	  f:schemaLocation="http://fluidtypo3.org/schemas/fluid-master.xsd"
+	  xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	  v:schemaLocation="http://fluidtypo3.org/schemas/vhs-master.xsd">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+	<div id="lpc-petition-list">
+		<div class="infoAmountOfEntries">
+			<f:translate key="list.totalEntries" arguments="{0: amount}" ></f:translate>
+		</div>
+
+		<div class="char-repo">
+			<f:for each="{entries}" as="entry" key="charTab" iteration="charIterator">
+				<f:if condition="{entry -> f:count()} > 0">
+					<f:then>
+						<div class="char-repo-entry-enabled" id="char-repo-entry-{charIterator.index}" onclick="$('.char-repo-container').hide();$('#char-repo-container-{charIterator.index}').show();$('.char-repo div').removeClass('active');$('#char-repo-entry-{charIterator.index}').addClass('active');">
+							{charTab}
+						</div>
+					</f:then>
+					<f:else>
+						<div class="char-repo-entry-disabled">{charTab}</div>
+					</f:else>
+				</f:if>
+			</f:for>
+		</div>
+
+		<f:if condition="{amount} > 0">
+			<f:then>
+				<f:for each="{entries}" as="entry" key="charTab" iteration="charIterator">
+					<div class="char-repo-container" id="char-repo-container-{charIterator.index}" style="display: none; clear: both;">
+						<f:render partial="Petition/Properties" arguments="{entries: entry,fields:fields}"/>
+					</div>
+				</f:for>
+			</f:then>
+			<f:else>
+				<div class="empty-list">
+					<f:translate key="list.emptylist"></f:translate>
+				</div>
+			</f:else>
+		</f:if>
+
+
+		<script>
+			window.onload = function() {
+				$('.char-repo div')[0].click();
+			};
+		</script>
+
+	</div>
+
+</f:section>
+</html>

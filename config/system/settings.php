@@ -44,26 +44,18 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'indexed_search' => [
-            'catdoc' => '/usr/bin/',
-            'debugMode' => '0',
-            'deleteFromIndexAfterEditing' => '1',
-            'disableFrontendIndexing' => '0',
-            'enableMetaphoneSearch' => '1',
-            'flagBitMask' => '192',
-            'fullTextDataLength' => '0',
-            'ignoreExtensions' => '',
-            'indexExternalURLs' => '0',
-            'maxAge' => '0',
-            'maxExternalFiles' => '5',
-            'minAge' => '24',
-            'pdf_mode' => '20',
-            'pdftools' => '/usr/bin/',
-            'ppthtml' => '/usr/bin/',
-            'unrtf' => '/usr/bin/',
-            'unzip' => '/usr/bin/',
-            'useMysqlFulltext' => '0',
-            'xlhtml' => '/usr/bin/',
+        'lpc_captcha' => [
+            'recaptcha' => [
+                'sitekey' => '6Lfgx34UAAAAALm8yVdhwRc-jhtfCaG7JhW7OCJY',
+                'sitekeyPrivate' => '6Lfgx34UAAAAANv9-nIVHJuyq6xm02kH2Q3_LOeC',
+            ],
+            'recaptchaInvisible' => [
+                'sitekey' => '6Lcmy34UAAAAAD8lmZknW7gDvoIwAq_UIWj6HSfB',
+                'sitekeyPrivate' => '6Lcmy34UAAAAANmyP49YPe44mAKdRAvkRmorLVys',
+            ],
+        ],
+        'static_info_tables' => [
+            'enableManager' => '0',
         ],
     ],
     'FE' => [

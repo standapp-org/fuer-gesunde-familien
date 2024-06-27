@@ -1,0 +1,10 @@
+<p><f:translate key="mail_doubleoptin_salutation" arguments="{0:'{entry.firstname} {entry.lastname}'}" /></p>
+
+<p><f:if condition="{settings.doubleOptInText}" then="{settings.doubleOptInText}" else="{f:translate(key:'mail_doubleoptin_body_intro')}" /></p>
+
+<p><f:translate key="mail_doubleoptin_explanation" /><br/>
+<f:link.action action="doubleOptIn" arguments="{hash:entry.optInHash}" absolute="1"><f:translate key="mail_doubleoptin_link_text" /></f:link.action></p>
+
+<p><f:translate key="mail_doubleoptin_regards" /><br/>{settings.organisationName}</p>
+
+<p><f:translate key="mail_doubleoption_ps_plain" /></p>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file source-language="de" target-language="fr" datatype="plaintext" original="messages" product-name="lpc_base">
+    <header/>
+    <body>
+      <trans-unit id="yes">
+        <source>Ja</source>
+        <target>oui</target>
+      </trans-unit>
+      <trans-unit id="no">
+        <source>Nein</source>
+        <target>non</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
