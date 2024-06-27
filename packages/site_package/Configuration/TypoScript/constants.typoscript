@@ -59,25 +59,4 @@ plugin.bootstrap_package.settings.scss {
     secondary = #013859
 }
 
-############
-### PAGE ###
-############
-page {
-  fluidtemplate {
-    layoutRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Layouts/Page/
-    partialRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Partials/Page/
-    templateRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Templates/Page/
-  }
-}
 
-
-########################
-### CONTENT ELEMENTS ###
-########################
-plugin.bootstrap_package_contentelements {
-  view {
-    layoutRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Layouts/ContentElements/
-    partialRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Partials/ContentElements/
-    templateRootPath = EXT:site_package/Resources/Private/Overrides/BootstrapPackage/Templates/ContentElements/
-  }
-}
