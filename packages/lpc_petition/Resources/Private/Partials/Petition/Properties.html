@@ -1,0 +1,28 @@
+<table>
+	<tr>
+		<f:for each="{fields}" as="field">
+			<th><f:translate key="formLabel.{field}" /></th>
+		</f:for>
+	</tr>
+
+	<f:for each="{entries}" as="petition" key="petitionKey">
+		<tr>
+			<f:for each="{fields}" as="field">
+				<f:switch expression="{field}">
+					<f:case value="birthday">
+						<td>{petition.birthday -> f:format.date(format:'d.m.Y')}</td>
+					</f:case>
+					<f:case value="canton">
+						<td><f:translate key="LLL:EXT:lpc_base/Resources/Private/Language/cantons.xlf:{petition.canton}" /></td>
+					</f:case>
+					<f:case value="comment">
+						<td>{petition.comment -> f:format.nl2br()}</td>
+					</f:case>
+					<f:defaultCase>
+						<td>{petition.{field}}</td>
+					</f:defaultCase>
+				</f:switch>
+			</f:for>
+		</tr>
+	</f:for>
+</table>

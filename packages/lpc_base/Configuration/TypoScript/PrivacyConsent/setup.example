@@ -1,0 +1,57 @@
+@import 'EXT:lpc_base/Configuration/TypoScript/PrivacyConsent/'
+
+page {
+	20 < lib.privacyConsent
+	20.dataProcessing.10.onAcceptAll = alert('Alles akzeptiert');
+
+
+	30 < lib.privacyConsent
+	30 {
+		dataProcessing.10.onAcceptAll = alert('Alles akzeptiert');
+		variables.acceptAll.value = Alles erlauben
+		variables.dismissAll = TEXT
+		variables.dismissAll.value = Nur notwendige erlauben
+	}
+
+
+	40 < lib.privacyConsent
+	40 {
+		dataProcessing.10.options {
+			required {
+				label = TEXT
+				label.value = Notwendig
+				dismissable = 0
+			}
+			analytics {
+				label = TEXT
+				label.value = Statistik
+				onAccept = TEXT
+				onAccept.value = alert('Analytics akzeptiert');
+				default = 1
+			}
+			marketing {
+				label = TEXT
+				label.value = Marketing
+				onAccept = COA
+				onAccept.10 = TEXT
+				onAccept.10.value = alert('Werbung akzeptiert');
+				onAccept.20 = TEXT
+				onAccept.20.value = alert('Marketing akzeptiert');
+				default = 0
+			}
+		}
+		dataProcessing.10.onAcceptAll = alert('Alles akzeptiert');
+		variables {
+			heading = TEXT
+			heading.value = Privatsphäre-Einstellungen
+			intro = TEXT
+			intro.value = Diese Website nutzt Cookies. Durch die weitere Nutzung der Site stimmen Sie deren Verwendung zu und akzeptieren unsere <a href="t3://page?uid=...">Datenschutzrichtlinien</a>.
+			save = TEXT
+			save.value = Speichern
+			acceptAll = TEXT
+			acceptAll.value = Alle akzeptieren
+			dismissAll = TEXT
+			dismissAll.value = Nicht notwendige ablehnen
+		}
+	}
+}

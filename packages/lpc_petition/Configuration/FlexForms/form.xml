@@ -1,0 +1,264 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_sheetForm</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.formFields>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_formfields</label>
+							<config>
+								<type>select</type>
+								<renderType>selectMultipleSideBySide</renderType>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.firstname</numIndex>
+										<numIndex index="1">firstname</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.lastname</numIndex>
+										<numIndex index="1">lastname</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.address</numIndex>
+										<numIndex index="1">address</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.zip</numIndex>
+										<numIndex index="1">zip</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.place</numIndex>
+										<numIndex index="1">place</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.canton</numIndex>
+										<numIndex index="1">canton</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.country</numIndex>
+										<numIndex index="1">country</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.mail</numIndex>
+										<numIndex index="1">mail</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="9">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.birthday</numIndex>
+										<numIndex index="1">birthday</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.phone</numIndex>
+										<numIndex index="1">phone</numIndex>
+									</numIndex>
+									<numIndex index="11">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.comment</numIndex>
+										<numIndex index="1">comment</numIndex>
+									</numIndex>
+									<numIndex index="12">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.private</numIndex>
+										<numIndex index="1">private</numIndex>
+									</numIndex>
+									<numIndex index="13">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.newsletter</numIndex>
+										<numIndex index="1">newsletter</numIndex>
+									</numIndex>
+									<numIndex index="14">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.allowReuse</numIndex>
+										<numIndex index="1">allowReuse</numIndex>
+									</numIndex>
+								</items>
+								<foreign_table>tx_lpcpetition_domain_model_field</foreign_table>
+								<foreign_table_where>tx_lpcpetition_domain_model_field.pid = ###CURRENT_PID###</foreign_table_where>
+								<allowNonIdValues>1</allowNonIdValues>
+								<size>5</size>
+								<maxitems>100</maxitems>
+							</config>
+						</TCEforms>
+					</settings.formFields>
+
+					<settings.mandatoryFields>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_mandatoryfields</label>
+							<config>
+								<type>select</type>
+								<renderType>selectMultipleSideBySide</renderType>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.firstname</numIndex>
+										<numIndex index="1">firstname</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.lastname</numIndex>
+										<numIndex index="1">lastname</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.address</numIndex>
+										<numIndex index="1">address</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.zip</numIndex>
+										<numIndex index="1">zip</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.place</numIndex>
+										<numIndex index="1">place</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.canton</numIndex>
+										<numIndex index="1">canton</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.country</numIndex>
+										<numIndex index="1">country</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.mail</numIndex>
+										<numIndex index="1">mail</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="9">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.birthday</numIndex>
+										<numIndex index="1">birthday</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.phone</numIndex>
+										<numIndex index="1">phone</numIndex>
+									</numIndex>
+									<numIndex index="11">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.comment</numIndex>
+										<numIndex index="1">comment</numIndex>
+									</numIndex>
+									<numIndex index="12">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.private</numIndex>
+										<numIndex index="1">private</numIndex>
+									</numIndex>
+									<numIndex index="13">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.newsletter</numIndex>
+										<numIndex index="1">newsletter</numIndex>
+									</numIndex>
+									<numIndex index="14">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.allowReuse</numIndex>
+										<numIndex index="1">allowReuse</numIndex>
+									</numIndex>
+								</items>
+								<foreign_table>tx_lpcpetition_domain_model_field</foreign_table>
+								<foreign_table_where>tx_lpcpetition_domain_model_field.pid = ###CURRENT_PID###</foreign_table_where>
+								<allowNonIdValues>1</allowNonIdValues>
+								<size>5</size>
+								<maxitems>100</maxitems>
+							</config>
+						</TCEforms>
+					</settings.mandatoryFields>
+
+					<settings.organisationName>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_organisationName</label>
+							<config>
+								<type>input</type>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.organisationName>
+
+					<settings.notifyEmail>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_notifyEmail</label>
+							<config>
+								<type>input</type>
+								<size>40</size>
+								<max>200</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.notifyEmail>
+
+					<settings.fromEmail>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_fromEmail</label>
+							<config>
+								<type>input</type>
+								<size>40</size>
+								<max>200</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.fromEmail>
+
+					<settings.fromEmailName>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_fromEmailName</label>
+							<config>
+								<type>input</type>
+								<size>40</size>
+								<max>200</max>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</settings.fromEmailName>
+
+					<settings.captcha>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_captcha</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.captcha>
+
+					<settings.doubleOptIn>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_doubleOptIn</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</settings.doubleOptIn>
+
+					<settings.doubleOptInSubject>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_doubleOptInSubject</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.doubleOptInSubject>
+
+					<settings.doubleOptInText>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_doubleOptInText</label>
+							<config>
+								<type>text</type>
+								<size>10</size>
+								<rows>5</rows>
+							</config>
+						</TCEforms>
+					</settings.doubleOptInText>
+
+					<settings.redirectPid>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_redirectPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</settings.redirectPid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

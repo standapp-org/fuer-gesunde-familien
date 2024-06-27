@@ -1,0 +1,101 @@
+ul.typo3-messages {
+	list-style:none;
+	padding:0;
+}
+
+ul.typo3-messages li.alert {
+	padding:15px 7px 15px 64px;
+	border:1px solid #ccc;
+	background-color:#eee;
+	position:relative;
+}
+ul.typo3-messages li.alert:before {
+	font-family:"Font Awesome 5 Free", "ForkAwesome";
+	position:absolute;
+	left:14px ;
+	top:50%;
+	margin-top:-16px;
+	font-size:22px;
+	width:32px;
+	height:32px;
+	text-align:center;
+	border-radius:16px;
+	line-height:32px;
+	box-sizing: border-box;
+}
+
+ul.typo3-messages li.alert h4 {
+	margin:4px 0;
+}
+ul.typo3-messages p {
+	margin: 4px 0;
+}
+
+ul.typo3-messages li.alert.alert-danger {
+	border-color:#eaa;
+	background-color:#fee;
+	color:#511;
+}
+ul.typo3-messages li.alert.alert-danger * {
+	color:#511;
+}
+ul.typo3-messages li.alert.alert-danger:before {
+	content:'\f00d';
+	background-color:#eaa;
+	font-weight:bold;
+}
+
+ul.typo3-messages li.alert.alert-notice {
+	background-color:#eee;
+	border-color:#ccc;
+	color:#444;
+}
+ul.typo3-messages li.alert.alert-notice * {
+	color:#444;
+}
+ul.typo3-messages li.alert.alert-notice:before {
+	content:'\f0eb';
+	background-color:#ccc;
+}
+
+ul.typo3-messages li.alert.alert-warning {
+	border-color:#efc077;
+	background-color:#ffe8aa;
+	color:#831;
+}
+ul.typo3-messages li.alert.alert-warning * {
+	color:#831;
+}
+ul.typo3-messages li.alert.alert-warning:before {
+	content:'\f12a';
+	background-color:#efc077;
+	font-weight:bold;
+}
+
+ul.typo3-messages li.alert.alert-success {
+	border-color:#5c5;
+	background-color:#ded;
+	color:#040;
+}
+ul.typo3-messages li.alert.alert-success * {
+	color:#040;
+}
+ul.typo3-messages li.alert.alert-success:before {
+	content:'\f00c';
+	background-color:#5c5;
+	font-weight:bold;
+}
+
+ul.typo3-messages li.alert.alert-info {
+	border-color:#9ae;
+	background-color:#def;
+	color:#015;
+}
+ul.typo3-messages li.alert.alert-info * {
+	color:#015;
+}
+ul.typo3-messages li.alert.alert-info:before {
+	content:'\f129';
+	background-color:#9ae;
+	font-weight:bold;
+}

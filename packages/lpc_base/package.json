@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "clean": "rm -rf Resources/Public/Datepicker/*",
+    "dev": "npm run clean && parcel build --no-optimize",
+    "build": "npm run clean && parcel build",
+    "watch": "npm run clean && parcel watch"
+  },
+  "targets": {
+    "form": {
+      "source": "Resources/Private/Scss/form.scss",
+      "distDir": "Resources/Public/CSS",
+      "optimize": true
+    },
+    "datepicker": {
+      "source": "Resources/Private/Scripts/datepicker.js",
+      "distDir": "Resources/Public/Datepicker",
+      "optimize": true
+    }
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.13"
+  }
+}

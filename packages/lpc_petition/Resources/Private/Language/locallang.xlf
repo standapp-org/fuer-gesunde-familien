@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="lpc_petition">
+		<header/>
+		<body>
+			<trans-unit id="formLabel.firstname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="formLabel.lastname">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="formLabel.address">
+				<source>Adresse</source>
+			</trans-unit>
+			<trans-unit id="formLabel.zip">
+				<source>PLZ</source>
+			</trans-unit>
+			<trans-unit id="formLabel.place">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.CH">
+				<source>Schweiz</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.DE">
+				<source>Deutschland</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.AT">
+				<source>Österreich</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.IT">
+				<source>Italien</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.FR">
+				<source>Frankreich</source>
+			</trans-unit>
+			<trans-unit id="formLabel.country.LI">
+				<source>Liechtenstein</source>
+			</trans-unit>
+			<trans-unit id="formLabel.canton">
+				<source>Kanton</source>
+			</trans-unit>
+			<trans-unit id="formLabel.mail">
+				<source>Mail</source>
+			</trans-unit>
+			<trans-unit id="formLabel.title">
+				<source>Titel / Beruf</source>
+			</trans-unit>
+			<trans-unit id="formLabel.birthday">
+				<source>Geburtsdatum</source>
+			</trans-unit>
+			<trans-unit id="formLabel.phone">
+				<source>Telefonnummer</source>
+			</trans-unit>
+			<trans-unit id="formLabel.comment">
+				<source>Bemerkungen</source>
+			</trans-unit>
+			<trans-unit id="formLabel.private">
+				<source>Meinen Namen auf dieser Homepage sichtbar machen?</source>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter">
+				<source>Newsletter abonnieren</source>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter.0">
+				<source>Nein</source>
+			</trans-unit>
+			<trans-unit id="formLabel.newsletter.1">
+				<source>Ja</source>
+			</trans-unit>
+
+			<trans-unit id="formLabel.private.0">
+				<source>Ja</source>
+			</trans-unit>
+			<trans-unit id="formLabel.private.1">
+				<source>Nein</source>
+			</trans-unit>
+
+			<trans-unit id="formLabel.allowReuse">
+				<source>Adresse darf durch die Organisation %s weiterverwendet werden</source>
+			</trans-unit>
+			<trans-unit id="formLabel.allowReuse.0">
+				<source>Nein</source>
+			</trans-unit>
+			<trans-unit id="formLabel.allowReuse.1">
+				<source>Ja</source>
+			</trans-unit>
+
+			<trans-unit id="form.explainAllowReuse">
+				<source>Ja bedeutet: Ich habe nichts dagegen, wenn ich in Zukunft (ohne Kostenfolgen) für thematisch ähnliche Aktionen angeschrieben werde. Ihre Adresse wird darüber hinaus keinerlei Dritten weitergegeben.</source>
+			</trans-unit>
+
+			<trans-unit id="formLabel.submit">
+				<source>Absenden</source>
+			</trans-unit>
+
+			<trans-unit id="formLabel.captcha">
+				<source>Spamschutz</source>
+			</trans-unit>
+
+			<trans-unit id="list.emptylist">
+				<source>Noch keine Einträge vorhanden</source>
+			</trans-unit>
+			<trans-unit id="list.totalEntries">
+				<source>Gesamtzahl Online-Unterschriften: %d</source>
+			</trans-unit>
+			<trans-unit id="list.charRepo.tab.new">
+				<source>Neueste</source>
+			</trans-unit>
+
+
+			<trans-unit id="form.mail_test.infotext">
+				<source>Zu dieser Petition hat sich bereits eine oder mehrere Personen mit Ihrer Mail-Adresse eingeschrieben. Sind Sie sicher, dass sie sich für diese Petition noch nicht eingeschrieben haben? 
+Folgend sind alle öffentlichen Einschreibungen, die auf Ihrer Mail Adresse lauten, angezeigt. Falls Sie sich nicht öffentlich eingeschrieben haben, ist die totale Anzahl Einschreibungen (inkl. versteckte Einschreibungen) ersichtlich.</source>
+			</trans-unit>
+			<trans-unit id="form.mail_test.totalFoundWithPrivate">
+				<source>Anzahl Adressen (inkl. versteckte)</source>
+			</trans-unit>
+			<trans-unit id="form.mail_test.confirm">
+				<source>Trotzdem einschreiben</source>
+			</trans-unit>
+			<trans-unit id="form.mail_test.cancel">
+				<source>Abbrechen</source>
+			</trans-unit>
+			<trans-unit id="submit_button_label">
+				<source>Klick hier um die Daten abzuschicken</source>
+			</trans-unit>
+
+			<trans-unit id="submit_thanks_text_title">
+				<source>Vielen Dank für Ihre Unterstützung!</source>
+			</trans-unit>
+			<trans-unit id="submit_thanks_text">
+				<source>Ihre Daten wurden erfolgreich erfasst.</source>
+			</trans-unit>
+			<trans-unit id="submit_thanks_text_doubleoptin">
+				<source>Sie werden ein E-Mail mit einem Bestätigungslink erhalten. Bitte klicken Sie auf jenen Link.</source>
+			</trans-unit>
+
+			<trans-unit id="mail_doubleoptin_subject">
+				<source>Bitte Bestätigen: Ihre Unterzeichnung der Petition</source>
+			</trans-unit>
+
+			<trans-unit id="mail_doubleoptin_body_intro">
+				<source>Herzlichen Dank für das Unterschreiben der Petition.</source>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_salutation">
+				<source>Guten Tag %s</source>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_explanation">
+				<source>Bitte bestätigen Sie durch Klick auf den folgenden Link Ihre Unterzeichnung und Ihre Mail-Adresse:</source>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_link_text">
+				<source>Unterschrift bestätigen</source>
+			</trans-unit>
+			<trans-unit id="mail_doubleoptin_regards">
+				<source>Herzlichen Dank und freundliche Grüsse!</source>
+			</trans-unit>
+			<trans-unit id="mail_doubleoption_ps_plain">
+				<source>PS: Sie können den Link auch in das Adress-Fenster Ihres Browsers kopieren.</source>
+			</trans-unit>
+
+			<trans-unit id="doubleoptin_success">
+				<source>Ihre Eingabe wurde erfolgreich bestätigt. Vielen Dank.</source>
+			</trans-unit>
+			<trans-unit id="doubleoptin_fail_title">
+				<source>Fehler</source>
+			</trans-unit>
+			<trans-unit id="doubleoptin_fail">
+				<source>Der aufgerufene Link ist ungültig oder wurde bereits verwendet.</source>
+			</trans-unit>
+
+			<trans-unit id="notifyMail_subject">
+				<source>Neue Petition erfasst</source>
+			</trans-unit>
+			<trans-unit id="notifyMail_body">
+				<source>Folgende neue Petition wurde auf %s erfasst.</source>
+			</trans-unit>
+
+			<trans-unit id="mandatoryFieldError">
+				<source>Dies ist ein Pflichtfeld</source>
+			</trans-unit>
+			<trans-unit id="invalidOptionError">
+				<source>Ungültige Option</source>
+			</trans-unit>
+
+			<trans-unit id="entry.crdate">
+				<source>Eingetragen</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

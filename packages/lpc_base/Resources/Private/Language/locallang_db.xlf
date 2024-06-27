@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-06-04T09:22:45Z" product-name="lpc_base">
+		<header/>
+		<body>
+			<trans-unit id="tx_lpcbase_domain_model_placeholder">
+				<source>Platzhalter</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.header_ypos">
+				<source>Vertikaler Ausschnitt (0 = oberster Bildbereich, 100 = unterster Bildbereich)</source>
+			</trans-unit>
+			<trans-unit id="sys_file_reference.header_xpos">
+				<source>Horizontaler Ausschnitt (0 = linker Bildbereich, 100 = rechter Bildbereich)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcbase_domain_model_sociallink">
+				<source>Social-Media Link</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcbase_domain_model_sociallink.link">
+				<source>Link (komplette URL)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcbase_domain_model_sociallink.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="pages.social_links">
+				<source>Links zu Social-Media Profilen</source>
+			</trans-unit>
+			<trans-unit id="tabs.pages.social_media">
+				<source>Social-Media</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  LPC\Captcha\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Answer/*'
+
+  LPC\Captcha\Backend\DataProvider:
+    public: true

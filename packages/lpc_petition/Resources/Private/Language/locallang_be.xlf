@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="lpc_petition">
+		<header/>
+		<body>
+			<trans-unit id="plugin.form.title">
+				<source>Petition Formular</source>
+			</trans-unit>
+			<trans-unit id="plugin.list.title">
+				<source>Liste von Unterschriften</source>
+			</trans-unit>
+
+			<trans-unit id="pi1_title">
+				<source>Petition</source>
+			</trans-unit>
+
+			<trans-unit id="flexform_sheetGeneral">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flexform_layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flexform_layout_form">
+				<source>Formular</source>
+			</trans-unit>
+			<trans-unit id="flexform_layout_list">
+				<source>Liste</source>
+			</trans-unit>
+
+			<trans-unit id="flexform_sheetForm">
+				<source>Formular</source>
+			</trans-unit>
+			<trans-unit id="flexform_formfields">
+				<source>Anzuzeigene Felder</source>
+			</trans-unit>
+			<trans-unit id="flexform_mandatoryfields">
+				<source>Obligatorische Felder</source>
+			</trans-unit>
+			<trans-unit id="flexform_captcha">
+				<source>Captcha-Feld zum Spamschutz verwenden</source>
+			</trans-unit>
+			<trans-unit id="flexform_doubleOptIn">
+				<source>Double Opt-In für E-Mail Verifikation verwenden</source>
+			</trans-unit>
+			<trans-unit id="flexform_doubleOptInText">
+				<source>Double Opt-In Mailtext (Einleitung)</source>
+			</trans-unit>
+			<trans-unit id="flexform_doubleOptInSubject">
+				<source>Double Opt-In Betreff</source>
+			</trans-unit>
+			<trans-unit id="flexform_redirectPid">
+				<source>Weiterleitung zu dieser Seite</source>
+			</trans-unit>
+			<trans-unit id="flexform_fromEmail">
+				<source>Absender E-Mail Adresse</source>
+			</trans-unit>
+			<trans-unit id="flexform_fromEmailName">
+				<source>Absender E-Mail Name</source>
+			</trans-unit>
+			<trans-unit id="flexform_organisationName">
+				<source>Name der Organisation</source>
+			</trans-unit>
+			<trans-unit id="flexform_notifyEmail">
+				<source>E-Mail Benachrichtigung bei neuem Eintrag</source>
+			</trans-unit>
+
+			<trans-unit id="flexform_sheetList">
+				<source>Liste</source>
+			</trans-unit>
+			<trans-unit id="flexform_listfields">
+				<source>Anzuzeigene Spalten</source>
+			</trans-unit>
+			<trans-unit id="flexform_list_storagePid">
+				<source>Seiten, auf denen die Unterschriften gespeichert sind. (Wenn leer: aktuelle Seite)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

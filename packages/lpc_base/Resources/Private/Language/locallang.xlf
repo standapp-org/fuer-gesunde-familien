@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" date="2015-06-04T09:22:45Z" product-name="lpc_base">
+		<header/>
+		<body>
+			<trans-unit id="tx_lpcbase_domain_model_placeholder">
+				<source>Placeholder</source>
+			</trans-unit>
+			<trans-unit id="yes">
+				<source>Ja</source>
+			</trans-unit>
+			<trans-unit id="no">
+				<source>Nein</source>
+			</trans-unit>
+			<trans-unit id="years">
+				<source>Jahre</source>
+			</trans-unit>
+			<trans-unit id="year">
+				<source>Jahr</source>
+			</trans-unit>
+			<trans-unit id="months">
+				<source>Monate</source>
+			</trans-unit>
+			<trans-unit id="month">
+				<source>Monat</source>
+			</trans-unit>
+			<trans-unit id="weeks">
+				<source>Wochen</source>
+			</trans-unit>
+			<trans-unit id="week">
+				<source>Woche</source>
+			</trans-unit>
+			<trans-unit id="days">
+				<source>Tage</source>
+			</trans-unit>
+			<trans-unit id="day">
+				<source>Tag</source>
+			</trans-unit>
+			<trans-unit id="hours">
+				<source>Stunden</source>
+			</trans-unit>
+			<trans-unit id="hour">
+				<source>Stunde</source>
+			</trans-unit>
+			<trans-unit id="minutes">
+				<source>Minuten</source>
+			</trans-unit>
+			<trans-unit id="minute">
+				<source>Minute</source>
+			</trans-unit>
+			<trans-unit id="seconds">
+				<source>Sekunden</source>
+			</trans-unit>
+			<trans-unit id="second">
+				<source>Sekunde</source>
+			</trans-unit>
+			<trans-unit id="form.files.addFiles">
+				<source>Dateien hinzufügen</source>
+			</trans-unit>
+			<trans-unit id="form.files.selectFile">
+				<source>Datei auswählen</source>
+			</trans-unit>
+			<trans-unit id="uploadError.size">
+				<source>Maximale Dateigrösse überschritten.</source>
+			</trans-unit>
+			<trans-unit id="uploadError.partial">
+				<source>Fehler beim Hochladen. Die Datei wurde nur teilweise hochgeladen, bitte versuchen Sie es erneut.</source>
+			</trans-unit>
+			<trans-unit id="uploadError.noFile">
+				<source>Es wurde keine Datei hochgeladen.</source>
+			</trans-unit>
+			<trans-unit id="uploadError.other">
+				<source>Das Hochladen ist fehlgeschlagen.</source>
+			</trans-unit>
+			<trans-unit id="uploadError.unacceptableType">
+				<source>Dateien vom Typ %s sind nicht erlaubt.</source>
+			</trans-unit>
+			<trans-unit id="all">
+				<source>alle</source>
+			</trans-unit>
+			<trans-unit id="swissCantonValidator.notvalid">
+				<source>Kein gültiger Kanton</source>
+			</trans-unit>
+			<trans-unit id="shareBy">
+				<source>{platform, select, mail {per {title}} whatsapp {per {title}} twitter {per {title}} threema {per {title}} other {auf {title}}} teilen</source>
+			</trans-unit>
+			<trans-unit id="and">
+				<source>und</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

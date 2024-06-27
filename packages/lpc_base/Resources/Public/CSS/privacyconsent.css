@@ -1,0 +1,102 @@
+
+.lpcPrivacyConsent {
+	position: fixed;
+	background: #e9f4ff;
+	background: rgb(237, 239, 245);
+	z-index: 99999;
+	bottom: 30px;
+	right: -800px;
+	width: 800px;
+	max-width: 80%;
+	max-width: calc(100% - 60px);
+	max-height: 80%;
+	max-height: calc(100% - 60px);
+	padding: 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	transition: right 0.3s ease-in;
+}
+.lpcPrivacyConsent.open {
+	right: 30px;
+}
+
+.lpcPrivacyConsent h3 {
+	font-size: 120%;
+}
+.lpcPrivacyConsent *:first-child {
+	margin-top: 0;
+}
+
+.lpcPrivacyConsent .options {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 8px 20px;
+}
+
+.lpcPrivacyConsent .consentOption {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+}
+
+.lpcPrivacyConsent .consentOption input {
+	display: none;
+}
+
+.lpcPrivacyConsent .consentOption input:not(:disabled) ~ * {
+	cursor: pointer;
+}
+
+.lpcPrivacyConsent svg {
+	height: 1em;
+}
+
+.lpcPrivacyConsent svg circle {
+	transition: transform 0.2s ease-in-out;
+}
+.lpcPrivacyConsent svg path {
+	transition: fill 0.2s linear;
+}
+
+.lpcPrivacyConsent .consentOption input:checked + svg circle {
+	transform: matrix(1,0,0,1,10,0);
+}
+.lpcPrivacyConsent .consentOption input:checked + svg path {
+	fill: #83c2fd;
+}
+.lpcPrivacyConsent .consentOption input:disabled + svg path {
+	fill: #cccccc;
+}
+.lpcPrivacyConsent .consentOption input:disabled + svg circle {
+	fill: #dddddd;
+}
+
+.lpcPrivacyConsent .actions {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 8px 20px;
+	flex-grow: 1;
+	justify-content: end;
+	align-items: end;
+}
+
+.lpcPrivacyConsent button {
+	all: revert;
+	padding: 0.3em 1em;
+	font-family: inherit;
+	font-size: inherit;
+	border: none;
+	color: white;
+	background: rgb(0, 136, 203);
+	cursor: pointer;
+}
+.lpcPrivacyConsent button:hover {
+	background: rgb(38, 174, 241);
+}
+
+.lpcPrivacyConsent form {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 20px;
+	justify-content: space-between;
+}

@@ -1,0 +1,44 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:lpc_base/Resources/Private/Language/locallang_be.xlf:flexform.defSheetTitle</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Cache output?</label>
+							<config>
+								<type>radio</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">cached</numIndex>
+										<numIndex index="1">Fluid->renderCached</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">uncached</numIndex>
+										<numIndex index="1">Fluid->renderUncached</numIndex>
+										</numIndex>
+								</items>
+								<default>Fluid->renderCached</default>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+					<settings.fluid>
+						<TCEforms>
+							<label>Fluid</label>
+							<config>
+								<type>text</type>
+								<renderType>t3editor</renderType>
+								<format>html</format>
+								<rows>20</rows>
+							</config>
+						</TCEforms>
+					</settings.fluid>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

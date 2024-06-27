@@ -1,0 +1,80 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_sheetList</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.storagePid>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_list_storagePid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+							</config>
+						</TCEforms>
+					</settings.storagePid>
+					<settings.listFields>
+						<TCEforms>
+							<label>LLL:EXT:lpc_petition/Resources/Private/Language/locallang_be.xlf:flexform_formfields</label>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.firstname</numIndex>
+										<numIndex index="1">firstname</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.lastname</numIndex>
+										<numIndex index="1">lastname</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.address</numIndex>
+										<numIndex index="1">address</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.zip</numIndex>
+										<numIndex index="1">zip</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.place</numIndex>
+										<numIndex index="1">place</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.canton</numIndex>
+										<numIndex index="1">canton</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.country</numIndex>
+										<numIndex index="1">country</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.mail</numIndex>
+										<numIndex index="1">mail</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+									<numIndex index="9">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.birthday</numIndex>
+										<numIndex index="1">birthday</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">LLL:EXT:lpc_petition/Resources/Private/Language/locallang.xlf:formLabel.phone</numIndex>
+										<numIndex index="1">phone</numIndex>
+									</numIndex>
+								</items>
+								<size>5</size>
+								<maxitems>100</maxitems>
+							</config>
+						</TCEforms>
+					</settings.listFields>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

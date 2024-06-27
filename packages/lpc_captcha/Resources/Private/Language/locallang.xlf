@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="de" datatype="plaintext" product-name="lpc_captcha">
+		<header/>
+		<body>
+			<trans-unit id="wrongCaptchaAnswer">
+				<source>Die Captcha Antwort war nicht korrekt</source>
+			</trans-unit>
+			<trans-unit id="captchaType">
+				<source>Captcha verwenden?</source>
+			</trans-unit>
+			<trans-unit id="captchaType.none">
+				<source>Nein</source>
+			</trans-unit>
+			<trans-unit id="captchaType.recaptcha">
+				<source>Google reCaptcha</source>
+			</trans-unit>
+			<trans-unit id="captchaType.recaptchaInvisible">
+				<source>unsichtbares Google reCaptcha</source>
+			</trans-unit>
+			<trans-unit id="captchaType.math">
+				<source>Rechenaufgabe</source>
+			</trans-unit>
+			<trans-unit id="shieldTitle">
+				<source>Mensch oder Bot?</source>
+			</trans-unit>
+			<trans-unit id="shieldMessage">
+				<source>Leider konnte nicht ausreichend sicher bestimmt werden, ob es sich bei Ihnen um ein Mensch oder eine Maschine handelt. Kann sein, dass Sie einfach super schnell sind. Um Spam zu vermeiden, bitten wir Sie, diese Rechnung zu lösen.</source>
+			</trans-unit>
+			<trans-unit id="shieldSubmit">
+				<source>Ok</source>
+			</trans-unit>
+			<trans-unit id="shieldAnswerWrong">
+				<source>Die Antwort war nicht korrekt.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

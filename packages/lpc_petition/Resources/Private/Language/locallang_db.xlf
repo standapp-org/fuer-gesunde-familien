@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="lpc_petition">
+		<header/>
+		<body>
+			<trans-unit id="tx_lpcpetition_domain_model_entry">
+				<source>Petition Eintrag</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field">
+				<source>Petition Formular-Feld</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type">
+				<source>Typ</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.input">
+				<source>Eingabefeld</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.select">
+				<source>Auswahlliste (Einfachauswahl)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.checkbox">
+				<source>Checkbox</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.checkboxes">
+				<source>Checkboxen (Mehrfachauswahl)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.radios">
+				<source>Radio-Buttons (Einfachauswahl)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.textarea">
+				<source>Textfeld (Mehrzeilig)</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.date">
+				<source>Datum</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.type.email">
+				<source>E-Mail Adresse</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.name">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_lpcpetition_domain_model_field.options">
+				<source>Optionen (eine pro Zeile)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,34 @@
+<f:translate key="notifyMail_body" arguments="{0:'{f:uri.page(absolute:1)}'}" />
+
+<p>
+	<f:for each="{fields}" key="property" as="field">
+		{field.name}:
+		<b>
+			<f:if condition="{field.type} == 'checkboxes'">
+				<f:then>
+					<f:if condition="{entry.{property}}">
+						<f:for each="{entry.{property}}" as="value" iteration="iter">
+							{field.options.{value}}<f:if condition="{iter.isLast}"><f:else>,</f:else></f:if>
+						</f:for>
+					</f:if>
+				</f:then>
+				<f:else if="{field.type} == 'select' || {field.type} == 'radios'">
+					{field.options.{entry.{property}}}
+				</f:else>
+				<f:else if="{field.type} == 'checkbox'">
+					<f:translate key="{f:if(condition: '{entry.{property}}', then: 'yes', else: 'no')}" extensionName="LpcBase" />
+				</f:else>
+				<f:else if="{field.type} == 'date'">
+					<f:format.date format="d.m.Y">{entry.{property}}</f:format.date>
+				</f:else>
+				<f:else if="{field.type} == 'textarea'">
+					<f:format.nl2br>{entry.{property}}</f:format.nl2br>
+				</f:else>
+				<f:else>
+					{entry.{property}}
+				</f:else>
+			</f:if>
+		</b>
+		<br/>
+	</f:for>
+</p>

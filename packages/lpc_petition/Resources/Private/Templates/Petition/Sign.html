@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+		xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+		xmlns:lpc="http://typo3.org/ns/Lpc/LpcBase/ViewHelper">
+
+	<f:layout name="Default" />
+
+	<f:section name="Main">
+		<a name="tx-lpc-petition-anker"></a>
+		<div class="petitionInfo">
+			<f:translate key="form.mail_test.infotext"></f:translate>
+		</div>
+		<br/>
+
+		<f:translate key="form.mail_test.totalFoundWithPrivate"></f:translate>: <b>{otherAddresses -> f:count()}</b>
+		<br/>
+
+		<f:groupedFor each="{otherAddresses}" groupBy="private" groupKey="private" as="entries">
+			<f:if condition="{private} == 0">
+				<f:render partial="Petition/Properties" arguments="{entries:entries}"/>
+			</f:if>
+		</f:groupedFor>
+		<br/>
+
+		<f:link.action action="form" section="tx-lpc-petition-anker"><f:translate key="form.mail_test.cancel"></f:translate></f:link.action><br/>
+		<f:link.action action="force" section="tx-lpc-petition-anker"><f:translate key="form.mail_test.confirm"></f:translate></f:link.action>
+
+		<br/><hr/><br/><br/>
+	</f:section>
+</html>

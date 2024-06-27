@@ -1,0 +1,106 @@
+.lpcFormFiles .top {
+	display:flex;
+	justify-content: space-between;
+}
+.lpcFormFiles .files {
+	display: flex;
+	flex-flow: row wrap;
+}
+.lpcFormFiles .files .file {
+	width: 90px;
+	height: 90px;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 5px 5px 0;
+	border: 1px solid #ddd;
+	background: #eee;
+}
+.lpcFormFiles.multi .files .file.added {
+	cursor: grab;
+}
+.lpcFormFiles.multi .files .file.provided {
+	cursor: pointer;
+}
+.lpcFormFiles.single .files .file {
+	cursor: pointer;
+}
+.lpcFormFiles .files .file.trashing {
+	opacity: 0.5;
+}
+.lpcFormFiles .files .file img {
+	max-width: 80px;
+	max-height: 80px;
+}
+.lpcFormFiles .files .placeholder {
+	width: 90px;
+	height: 90px;
+	border: 4px dashed black;
+	margin: 0 5px 5px 0;
+	box-sizing: border-box;
+}
+.lpcFormFiles.single .files .file.added:hover:after {
+	content: '\f014';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	line-height: 90px;
+	text-align: center;
+	font-family: 'FontAwesome', 'ForkAwesome';
+	font-size: 54px;
+	color: red;
+	background: rgba(255,255,255,0.6);
+}
+.lpcFormFiles .files .file.provided:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(255,255,255,0.6);
+}
+.lpcFormFiles .files .file.provided.selected:after {
+	content: none;
+}
+.lpcFormFiles .trash {
+	width: 90px;
+	height: 90px;
+	font-size: 54px;
+	line-height: 82px;
+	text-align: center;
+	display: none;
+	box-sizing: border-box;
+	border: 4px solid transparent;
+	color: red;
+}
+.lpcFormFiles .trash.trashing {
+	border: 4px dashed red;
+}
+.lpcFormFiles.dragging .trash {
+	display: inline-block;
+}
+
+.lpcFormFiles .lpcUploadButton {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.lpcFormFiles .lpcUploadButton input {
+	font-size: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.lpcFormFiles .lpcUploadButton input,
+.lpcFormFiles .lpcUploadButton input::-webkit-file-upload-button {
+	cursor: pointer;
+}

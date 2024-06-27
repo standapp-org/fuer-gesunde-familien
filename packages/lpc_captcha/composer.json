@@ -1,0 +1,26 @@
+{
+    "name": "lpc/captcha",
+    "type": "typo3-cms-extension",
+    "description": "Captcha form protection",
+    "homepage": "https://www.laupercomputing.ch",
+    "keywords": ["TYPO3 CMS", "Captcha", "Spamshield"],
+    "version": "0.0.1",
+    "require": {
+        "typo3/cms-core": "^12.4",
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LPC\\Captcha\\": "Classes"
+        }
+    },
+    "replace": {
+        "lpc/captcha": "self.version",
+        "typo3-ter/lpc-captcha": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "lpc_captcha"
+        }
+    }
+}

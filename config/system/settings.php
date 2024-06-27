@@ -44,6 +44,19 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'lpc_captcha' => [
+            'recaptcha' => [
+                'sitekey' => '6Lfgx34UAAAAALm8yVdhwRc-jhtfCaG7JhW7OCJY',
+                'sitekeyPrivate' => '6Lfgx34UAAAAANv9-nIVHJuyq6xm02kH2Q3_LOeC',
+            ],
+            'recaptchaInvisible' => [
+                'sitekey' => '6Lcmy34UAAAAAD8lmZknW7gDvoIwAq_UIWj6HSfB',
+                'sitekeyPrivate' => '6Lcmy34UAAAAANmyP49YPe44mAKdRAvkRmorLVys',
+            ],
+        ],
+        'static_info_tables' => [
+            'enableManager' => '0',
+        ],
     ],
     'FE' => [
         'cacheHash' => [
