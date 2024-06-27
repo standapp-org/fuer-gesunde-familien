@@ -9,14 +9,9 @@ $synchronizeTables = [
     //    'tt_content',
     //    'be_groups',
     //    'be_users',
-    //    'fe_groups',
-    //    'fe_users',
-    //    'sys_refindex',
-    //    'sys_template',
-    //    'tx_datafilter_filters',
-    //    'tx_dataquery_queries',
-    //    'tx_displaycontroller_components_mm',
-    //    'tx_phpdisplay_displays',
+    //    'sys_refindex', //todo it can be calculated
+    //    'sys_file',
+    //    'sys_file_reference',
 ];
 
 $synchronizeTablesDefaultValues = [
@@ -35,15 +30,6 @@ $synchronizeTablesDefaultValues = [
     //    'be_users' => [
     //        'password'
     //    ],
-    //    'fe_groups' => [],
-    //    'fe_users' => [],
-    //    'sys_domain' => [],
-    //    'sys_refindex' => [],
-    //    'sys_template' => [],
-    //    'tx_datafilter_filters' => [],
-    //    'tx_dataquery_queries' => [],
-    //    'tx_displaycontroller_components_mm' => [],
-    //    'tx_phpdisplay_displays' => [],
 ];
 
 $importTables = [

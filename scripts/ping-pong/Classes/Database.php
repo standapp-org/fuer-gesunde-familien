@@ -53,15 +53,7 @@ class Database
     const ERROR_NO_CONNECTION = 'Impossible car la connexion a la BD est inactive';
     const ERROR_SQL_FAILED = 'La requete a echouee';
 
-    /**
-     * Constructor
-     *
-     * @param string $host
-     * @param string $username
-     * @param string $password
-     * @param integer $port
-     */
-    public function __construct($host, $username, $password, $port = 3306)
+    public function __construct(string $host, string $username, string $password, int $port = 3306)
     {
         $this->hostname = $host;
         $this->username = $username;
@@ -78,12 +70,7 @@ class Database
         $this->disconnect();
     }
 
-    /**
-     * Connect to database
-     *
-     * @param string $databaseName
-     */
-    public function connect($databaseName = '')
+    public function connect(string $databaseName = '')
     {
         $this->bdLink = @mysqli_connect($this->hostname, $this->username, $this->password, '', $this->port);
         $this->handleError(!$this->bdLink, 'Connect - ' . self::ERROR_CONNECT . ' ' . $this->hostname);
@@ -320,13 +307,7 @@ class Database
         }
     }
 
-    /**
-     * Delete records from an associative array
-     *
-     * @param string $table
-     * @param array $clauses
-     */
-    public function delete($table, array $clauses = [])
+    public function delete(string $table, array $clauses = []): array
     {
         // protect and quote every data to insert
         array_walk($clauses, [$this, 'addQuotes']);
@@ -342,33 +323,19 @@ class Database
         return $this->query($query);
     }
 
-    /**
-     * @return array
-     */
-    public function select($query)
+    public function select($query): array
     {
         $resultSet = $this->query($query);
         return $this->getAssocArrays($resultSet);
     }
 
-    /**
-     * @return array
-     */
-    public function selectOne($query)
+    public function selectOne($query): array
     {
         $resultSet = $this->query($query);
         return $this->getAssocArray($resultSet);
     }
 
-    /**
-     * Update records from table
-     *
-     * @param string $table
-     * @param array $fields
-     * @param array $conditions
-     * @return boolean
-     */
-    public function update($table, array $fields, array $conditions = [])
+    public function update(string $table, array $fields, array $conditions = []): bool
     {
         if (!is_array($fields) || count($fields) == 0) {
             return false;
@@ -401,7 +368,7 @@ class Database
      * @param mixed $isError
      * @param string $errorMessage
      */
-    protected function handleError($isError, $errorMessage)
+    protected function handleError($isError, string $errorMessage)
     {
         if (!$isError) {
             return;
@@ -429,13 +396,11 @@ class Database
     {
         return $this->databaseName;
     }
-
-
     public function getPort():string
+
     {
         return $this->port;
     }
-
 
     public function getPassword():string
     {
@@ -443,14 +408,11 @@ class Database
     }
 
 
-    public function getUsername():string
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    /**
-     * @return string
-     */
     public function getHostname(): string
     {
         return $this->hostname;
