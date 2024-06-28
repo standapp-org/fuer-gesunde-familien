@@ -114,28 +114,37 @@ class Database
      * Execute SQL query
      *
      * @param string $query
-     * @return mysqli_result|boolean mysqli_result if results are expected, true otherwise and null if no results
+     * @return mysqli_result|array|null|bool mysqli_result if results are expected, true if query executed successfully without results, null if no results, false on failure
      */
     public function query($query)
     {
         $this->handleError(!isset($this->bdLink), 'Query - ' . self::ERROR_NO_CONNECTION);
-        $this->handleError(
-            !@mysqli_real_query($this->bdLink, $query),
-            'Query - ' . self::ERROR_SQL_FAILED . ' ' . $query,
-        );
+        $this->handleError(empty($query), 'Query - ' . self::ERROR_SQL_FAILED . ' - Empty query');
 
-        //si c'est une requête qui n'est pas cense ramener qqchose on stop
-        if (@mysqli_field_count($this->bdLink) == 0) {
-            return true;
+        // Execute the query
+
+        $result = @mysqli_query($this->bdLink, $query);
+
+        if ($result === false) {
+            // Query execution failed
+            return false;
         }
 
-        $result = @mysqli_store_result($this->bdLink);
-        if (@mysqli_num_rows($result) > 0) {
-            return $result;
+        // Check if the query is not expected to return any results
+        if (@mysqli_field_count($this->bdLink) == 0) {
+            return true; // Query executed successfully without results
+        }
+
+        // Check if there are rows in the result set
+        $numRows = @mysqli_num_rows($result);
+        if ($numRows > 0) {
+            return $result; // Return mysqli_result object
         } else {
-            return null;
+            return null; // No rows found
         }
     }
+
+
 
     /**
      * Returns wether a table exists
@@ -267,7 +276,7 @@ class Database
      * @param mysqli_result $result
      * @return array empty array if no result
      */
-    public function getAssocArrays(mysqli_result $result = null)
+    public function getAssocArrays(mysqli_result $result = null): array
     {
         $contentArray = [];
         if ($result != null) {
@@ -291,12 +300,19 @@ class Database
         // protect and quote every data to insert
         array_walk($fields, [$this, 'addQuotes']);
 
+        if (array_key_exists('recursive', $fields)) {
+         unset($fields['recursive']);
+        }
+
         $query =
             "INSERT INTO `$table` (" .
             implode(',', array_keys($fields)) .
             ') VALUES (' .
             implode(',', array_values($fields)) .
             ')';
+
+
+
         $result = $this->query($query);
 
         // retourne l'id de la nouvelle entrée ou false si une erreur s'est produite
@@ -307,13 +323,14 @@ class Database
         }
     }
 
-    public function delete(string $table, array $clauses = []): array
+    public function delete(string $table, array $clauses = []): bool
     {
         // protect and quote every data to insert
         array_walk($clauses, [$this, 'addQuotes']);
 
         $query = "DELETE FROM `$table`";
         if (!empty($clauses)) {
+            $clauses2Sql = [];
             foreach ($clauses as $key => $value) {
                 $clauses2Sql[] = "`$key`=$value";
             }

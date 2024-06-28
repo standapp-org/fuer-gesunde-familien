@@ -6,12 +6,12 @@ Script CLI (command line interface) for synchronizing two database
 
 $synchronizeTables = [
     'pages',
-    //    'tt_content',
-    //    'be_groups',
-    //    'be_users',
+        'tt_content',
+        'be_groups',
+        'be_users',
     //    'sys_refindex', //todo it can be calculated
-    //    'sys_file',
-    //    'sys_file_reference',
+        'sys_file',
+        'sys_file_reference',
 ];
 
 $synchronizeTablesDefaultValues = [
@@ -21,15 +21,27 @@ $synchronizeTablesDefaultValues = [
         //        'author',
         //        'nav_title',
     ],
-    //    'tt_content' => [
-    //
-    //        'subheader',
-    //        'header_link'
-    //    ],
+        'tt_content' => [
+
+//            'header_link'
+        ],
     //    'be_groups' => [],
     //    'be_users' => [
     //        'password'
     //    ],
+    'sys_file'=>[
+
+    ],
+    'sys_file_reference'=>[
+
+    ],
+    'be_groups'=>[
+
+    ],
+    'be_users'=>[
+
+    ],
+
 ];
 
 $importTables = [
@@ -98,8 +110,8 @@ foreach ($synchronizeTables as $synchronizeTable) {
     $clause = '1 = 1';
     $specialFields = [
         'deleted',
-        //        'disable',
-        //        'hidden'
+                'disable',
+                'hidden'
     ];
     foreach ($specialFields as $specialField) {
         if (in_array($specialField, $newFieldsNames)) {
@@ -120,6 +132,7 @@ foreach ($synchronizeTables as $synchronizeTable) {
             if (!in_array($fieldName, $newFieldsNames)) {
                 unset($toImportValue[$fieldName]);
             }
+
         }
 
         foreach ($synchronizeTablesDefaultValues[$synchronizeTable] as $fieldName => $value) {
