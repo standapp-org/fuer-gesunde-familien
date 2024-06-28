@@ -15,33 +15,17 @@ use mysqli_result;
  * $users = $db->select('SELECT * FROM products');
  * $user = $db->selectOne('SELECT * FROM products WHERE id = 20');
  */
-
 class Database
 {
-    /**
-     * @var string
-     */
     protected string $hostname;
 
-    /**
-     * @var string
-     */
-    protected  $username;
+    protected string $username;
 
-    /**
-     * @var string
-     */
-    protected  $password;
+    protected string $password;
 
-    /**
-     * @var string
-     */
-    protected  $port;
+    protected string $port;
 
-    /**
-     * @var string
-     */
-    protected  $databaseName;
+    protected string $databaseName;
 
     /**
      * @var resource
@@ -62,15 +46,12 @@ class Database
         unset($this->bdLink);
     }
 
-    /**
-     * Destructor
-     */
     public function __destruct()
     {
         $this->disconnect();
     }
 
-    public function connect(string $databaseName = '')
+    public function connect(string $databaseName = ''): void
     {
         $this->bdLink = @mysqli_connect($this->hostname, $this->username, $this->password, '', $this->port);
         $this->handleError(!$this->bdLink, 'Connect - ' . self::ERROR_CONNECT . ' ' . $this->hostname);
@@ -84,10 +65,8 @@ class Database
 
     /**
      * Disconnect from database
-     *
-     * @param string $errorMessage
      */
-    public function disconnect()
+    public function disconnect(): void
     {
         if (isset($this->bdLink)) {
             @mysqli_close($this->bdLink);
@@ -95,12 +74,7 @@ class Database
         }
     }
 
-    /**
-     * Select database
-     *
-     * @param string $databaseName
-     */
-    public function selectBd($databaseName)
+    public function selectBd($databaseName): void
     {
         $this->handleError(!isset($this->bdLink), 'SelectBd - ' . self::ERROR_NO_CONNECTION);
         $this->databaseName = $databaseName;
@@ -112,11 +86,8 @@ class Database
 
     /**
      * Execute SQL query
-     *
-     * @param string $query
-     * @return mysqli_result|array|null|bool mysqli_result if results are expected, true if query executed successfully without results, null if no results, false on failure
      */
-    public function query($query)
+    public function query(string $query): mysqli_result|array|null|bool
     {
         $this->handleError(!isset($this->bdLink), 'Query - ' . self::ERROR_NO_CONNECTION);
         $this->handleError(empty($query), 'Query - ' . self::ERROR_SQL_FAILED . ' - Empty query');
@@ -144,15 +115,10 @@ class Database
         }
     }
 
-
-
     /**
-     * Returns wether a table exists
-     *
-     * @param string $tableName
-     * @return boolean
+     * Returns whether a table exists
      */
-    public function tblExist($tableName)
+    public function tblExist(string $tableName): bool
     {
         $this->handleError(!isset($this->bdLink), 'TblExist - ' . self::ERROR_NO_CONNECTION);
 
@@ -161,22 +127,16 @@ class Database
 
     /**
      * Escape string for inclusion in SQL
-     *
-     * @param string $str
-     * @return string escaped string
      */
-    public function escapeStr($str)
+    public function escapeStr(string $str): string
     {
         return mysqli_real_escape_string($this->bdLink, $str);
     }
 
     /**
      * Internal callback to be used with array_walk()
-     *
-     * @param string $item
-     * @param mixed $key
      */
-    protected function addQuotes(&$item, $key)
+    protected function addQuotes(&$item): void
     {
         if (is_null($item)) {
             $item = 'NULL';
@@ -187,12 +147,8 @@ class Database
 
     /**
      * Get one object from a resultset
-     *
-     * @param mysqli_result $result
-     * @param string $className
-     * @return Object of type $className
      */
-    public function getObject(mysqli_result $result = null, $className)
+    public function getObject(mysqli_result $result = null, $className): object
     {
         $obj = null;
         if ($result != null) {
@@ -209,13 +165,9 @@ class Database
     }
 
     /**
-     * Get an array of objects from a resultset
-     *
-     * @param mysqli_result $result
-     * @param string $className
-     * @return Object[] of type $className
+     * Get an array of objects from a result-set
      */
-    public function getObjects(mysqli_result $result = null, $className)
+    public function getObjects(mysqli_result $result = null, $className): array
     {
         $arrayObjects = [];
         if ($result != null) {
@@ -236,11 +188,8 @@ class Database
     /**
      * Get all fields of all records in one single non-associative array
      * It's basically all values available concatened in a single array
-     *
-     * @param mysqli_result $result
-     * @return array empty array if no result
      */
-    public function getRowArrays(mysqli_result $result = null)
+    public function getRowArrays(mysqli_result $result = null): array
     {
         $arrayFromResultSet = [];
         if ($result != null) {
@@ -254,13 +203,7 @@ class Database
         return $arrayFromResultSet;
     }
 
-    /**
-     * Get one record as one associative array
-     *
-     * @param mysqli_result $result
-     * @return array empty array if no result
-     */
-    public function getAssocArray(mysqli_result $result = null)
+    public function getAssocArray(mysqli_result $result = null): array
     {
         $return = [];
         if ($result != null) {
@@ -270,12 +213,6 @@ class Database
         return $return;
     }
 
-    /**
-     * Get all records as an array of associative arrays
-     *
-     * @param mysqli_result $result
-     * @return array empty array if no result
-     */
     public function getAssocArrays(mysqli_result $result = null): array
     {
         $contentArray = [];
@@ -288,30 +225,17 @@ class Database
         return $contentArray;
     }
 
-    /**
-     * Insert a record from an associative array and returns the ID inserted
-     *
-     * @param string $table
-     * @param array $fields
-     * @return integer|false ID inserted or false in case of error
-     */
-    public function insert($table, array $fields)
+    public function insert(string $table, array $fields): int|false
     {
         // protect and quote every data to insert
         array_walk($fields, [$this, 'addQuotes']);
 
-        if (array_key_exists('recursive', $fields)) {
-         unset($fields['recursive']);
-        }
-
-        $query =
-            "INSERT INTO `$table` (" .
-            implode(',', array_keys($fields)) .
-            ') VALUES (' .
-            implode(',', array_values($fields)) .
-            ')';
-
-
+        $query = sprintf(
+            'INSERT INTO `%s` (`%s`) VALUES (%s)',
+            $table,
+            implode('`, `', array_keys($fields)),
+            implode(', ', array_values($fields)),
+        );
 
         $result = $this->query($query);
 
@@ -408,22 +332,19 @@ class Database
         die($errorMessage . '<br/>' . PHP_EOL . $msgPhpError . PHP_EOL);
     }
 
-
-    public function getDatabaseName():string
+    public function getDatabaseName(): string
     {
         return $this->databaseName;
     }
-    public function getPort():string
-
+    public function getPort(): string
     {
         return $this->port;
     }
 
-    public function getPassword():string
+    public function getPassword(): string
     {
         return $this->password;
     }
-
 
     public function getUsername(): string
     {
