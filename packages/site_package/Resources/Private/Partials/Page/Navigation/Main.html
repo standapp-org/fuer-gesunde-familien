@@ -3,8 +3,8 @@
 <f:variable name="headerClass">bp-page-header navbar navbar-mainnavigation </f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: logo.normal, then:' navbar-has-image')}</f:variable>
 <f:variable name="headerClass">{headerClass}{f:if(condition: theme.navigation.type, else:' navbar-top', then:' navbar-{theme.navigation.type} navbar-fixed-{theme.navigation.type}')}</f:variable>
-<header id="page-header" class="{headerClass} bg-danger border-white" style="height: 15px; padding: 25px;">
-    <div class="container container-mainnavigation bg-danger ">
+<header id="page-header" class="{headerClass} border-white" style="height: 15px; margin: unset ; padding-bottom: 20px;padding-top: 15px; background-color:#E22423">
+    <div class="container container-mainnavigation  navbar navbar-fixed-top">
         <f:render partial="Header/Logo" arguments="{_all}" />
         <f:if condition="{mainnavigation}">
             <f:render partial="Header/Toggle" arguments="{_all}" />

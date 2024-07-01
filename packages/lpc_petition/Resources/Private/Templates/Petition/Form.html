@@ -8,10 +8,10 @@
 
 	<f:section name="Main">
 		<a name="tx-lpc-petition-anker"></a>
-
 		<f:form action="sign" objectName="entry" section="tx-lpc-petition-anker" method="post" class="petitionForm lpcForm" id="lpc-petition-form">
 			<f:for each="{fields}" key="property" as="field">
-				<lpc:form.group mandatory="{field.mandatory}" label="{field.name}">
+				<lpc:form.group mandatory="{field.mandatory}" label="{field.name}" >
+
 					<f:switch expression="{field.type}">
 						<f:case value="input">
 							<f:form.textfield property="{property}" title="{field.title}" />
@@ -20,7 +20,7 @@
 							<f:form.textarea property="{property}" title="{field.title}" />
 						</f:case>
 						<f:case value="date">
-							<lpc:form.dateTime property="{property}" title="{field.title}" />
+							<lpc:form.dateTime property="{property}" title="{field.title}" placeholder="Beispiel (12.12.2022)"/>
 						</f:case>
 						<f:case value="email">
 							<f:form.textfield property="{property}" title="{field.title}" type="email" />
@@ -69,8 +69,8 @@
 			</f:if>
 			</f:comment>
 
-			<div class="lpcFormButtons">
-				<div><f:form.button><f:translate key="formLabel.submit" /></f:form.button></div>
+			<div class="lpcFormButtons " >
+				<div class="button"><f:form.button><f:translate key="formLabel.submit" /></f:form.button></div>
 			</div>
 
 		</f:form>

@@ -7,14 +7,22 @@
 	display:flex;
 	flex-flow:row wrap;
 	align-items:flex-start;
-	margin:0.4em 0;
+
+
+
+
+}
+.lpcForm .lpcFormButtons .button {
+    margin-left:-14px;
+
+
+
 }
 
 .lpcForm .lpcFormGroup > label,
 .lpcForm .lpcFormGroup > .emptyCell,
 .lpcForm .lpcFormError:before,
-.lpcForm .lpcFormGroup.aligned:before,
-.lpcForm .lpcFormButtons:before {
+.lpcForm .lpcFormGroup.aligned:before{
 	width:20%;
 	min-width:10em;
 	max-width:400px;
@@ -38,7 +46,6 @@
 .lpcForm .lpcFormGroup > button,
 .lpcForm .lpcFormInput {
 	flex-grow:10;
-	padding:5px 8px;
 	margin:0;
 	white-space:nowrap;
 	font-size:16px;
@@ -53,7 +60,6 @@
 .lpcForm .lpcFormButtons > div {
 	flex-grow:10;
 	padding:0;
-	margin:0.2em 0;
 	width:300px;
 }
 
@@ -100,7 +106,6 @@
 	width:auto;
 	font-size:16px;
 	border:1px solid #aaa;
-	padding:5px 8px;
 	background:#eee;
 	text-decoration:none;
 	color:#000;

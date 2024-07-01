@@ -14,12 +14,9 @@
     </div>
 
     <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '9', slide: '{theme.pagelayout.{pagelayout}.colPos.9.slide}'}" />
-
 </f:section>
 <f:section name="Footer">
-    <div class="text-center">
-    <f:render partial="Navigation/Footer" arguments="{_all}" />
-    </div>
 
+    <f:render partial="Navigation/Footer" arguments="{_all}" />
 </f:section>
 </html>
