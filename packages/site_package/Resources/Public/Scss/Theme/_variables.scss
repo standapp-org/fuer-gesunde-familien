@@ -1,3 +1,14 @@
 //
 // Variables
 //
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1170px, // previous value 1140px
+    xxl: 1170px // previous value 1320px
+) !default;
+
+$headings-font-family: inherit;
+$font-family-sans-serif: "Helvetica Neue",Helvetica,Arial,sans-serif;
