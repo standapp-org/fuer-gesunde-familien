@@ -4,6 +4,11 @@
 Script CLI (command line interface) for synchronizing two database
 */
 
+$credentialsFile = 'credentials.php';
+if (file_exists($credentialsFile)) {
+    include $credentialsFile;
+}
+
 $synchronizeTables = [
     'pages',
     'tt_content',
@@ -56,21 +61,25 @@ $importTables = [
 # Database credentials
 ############################################
 
-$sourceCredentials = [
-    'host' => 'db',
-    'username' => 'root',
-    'password' => 'root',
-    'database' => 'db2',
-    'port' => '3306',
-];
+if (!isset($sourceCredentials)) {
+    $sourceCredentials = [
+        'host' => 'db',
+        'username' => 'root',
+        'password' => 'root',
+        'database' => 'db2',
+        'port' => '3306',
+    ];
+}
 
-$targetCredentials = [
-    'host' => 'db',
-    'username' => 'root',
-    'password' => 'root',
-    'database' => 'db',
-    'port' => '3306',
-];
+if (!isset($targetCredentials)) {
+    $targetCredentials = [
+        'host' => 'db',
+        'username' => 'root',
+        'password' => 'root',
+        'database' => 'db',
+        'port' => '3306',
+    ];
+}
 
 ############################################
 # Beginning of the script
@@ -96,6 +105,7 @@ $dbTarget = new Ecodev\Database(
     $targetCredentials['password'],
     $targetCredentials['port'],
 );
+
 $dbTarget->connect($targetCredentials['database']);
 
 // Synchronize tables
