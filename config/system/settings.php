@@ -54,6 +54,15 @@ return [
                 'sitekeyPrivate' => '6Lcmy34UAAAAANmyP49YPe44mAKdRAvkRmorLVys',
             ],
         ],
+        'powermail' => [
+            'disableBackendModule' => '0',
+            'disableIpLog' => '1',
+            'disableMarketingInformation' => '0',
+            'disablePluginInformation' => '0',
+            'disablePluginInformationMailPreview' => '0',
+            'enableCaching' => '0',
+            'replaceIrreWithElementBrowser' => '0',
+        ],
         'static_info_tables' => [
             'enableManager' => '0',
         ],

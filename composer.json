@@ -1,6 +1,6 @@
 {
 	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"type": "project",
 	"config": {
@@ -49,6 +49,7 @@
 		"typo3/cms-t3editor": "^12.4.0",
 		"typo3/cms-tstemplate": "^12.4.0",
 		"typo3/cms-viewpage": "^12.4.0",
-		"typo3/cms-webhooks": "^12.4.0"
+		"typo3/cms-webhooks": "^12.4.0",
+		"ext-mysqli": "*"
 	}
 }
