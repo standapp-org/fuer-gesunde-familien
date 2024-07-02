@@ -184,45 +184,44 @@ $dbTarget->update('pages', ['slug' => '/zugang-life-archivech'], ['uid' => '21']
 $dbTarget->update('pages', ['slug' => '/anmeldung-hli-tagung-2023'], ['uid' => '63']);
 $dbTarget->update('pages', ['slug' => '/impressum-kontakt'], ['uid' => '3']);
 $dbTarget->update('pages', ['slug' => '/keine-kassenpflicht-fuer-ivf'], ['uid' => '61']);
-$dbTarget->update('pages', ['slug' => '/anmeldung-zugang-online-medienbeobachtung-abstimmungskampf-referendum-nein-zur-organentnahme-ohne-zustimmung'], ['uid' => '59']);
+$dbTarget->update(
+    'pages',
+    [
+        'slug' =>
+            '/anmeldung-zugang-online-medienbeobachtung-abstimmungskampf-referendum-nein-zur-organentnahme-ohne-zustimmung',
+    ],
+    ['uid' => '59'],
+);
 $dbTarget->update('pages', ['slug' => '/ref-organspende-medienseminar'], ['uid' => '57']);
 $dbTarget->update('pages', ['slug' => '/petition-freie-wahl-statt-maskenzwang'], ['uid' => '53']);
 $dbTarget->update('pages', ['slug' => '/pinnwand-maskenerfahrungen'], ['uid' => '55']);
 $dbTarget->update('pages', ['slug' => '/formular-uebermittlung-inhalte-pinnwand'], ['uid' => '56']);
 $dbTarget->update('pages', ['slug' => '/hli-tagung-kultur-der-sorge'], ['uid' => '51']);
-$dbTarget->update('pages', ['slug' => '/anmeldung-zugang-online-medienbeobachtung-kampagne-nein-zur-ehe-fuer-alle'], ['uid' => '48']);
+$dbTarget->update(
+    'pages',
+    ['slug' => '/anmeldung-zugang-online-medienbeobachtung-kampagne-nein-zur-ehe-fuer-alle'],
+    ['uid' => '48'],
+);
 $dbTarget->update('pages', ['slug' => '/anmeldung-tagung'], ['uid' => '45']);
 $dbTarget->update('pages', ['slug' => '/schluss-lockdown-gottesdienste'], ['uid' => '41']);
 $dbTarget->update('pages', ['slug' => '/zurueck-zur-vernunft-schluss-mit-corona-lockdown'], ['uid' => '37']);
 $dbTarget->update('pages', ['slug' => '/moratorium-organspenden-nach-herztod'], ['uid' => '35']);
 $dbTarget->update('pages', ['slug' => '/befreiung-homo-netzwerke'], ['uid' => '28']);
-$dbTarget->update('pages', ['slug'=>  '/inside-church-no-homo-network'],['uid'=>'31']);
-$dbTarget->update('pages', ['slug'=>  '/petition-aux-conseil-federal-sensiblisez-le-public-aux-consequences-de-lavortement'],['uid'=>'25']);
-$dbTarget->update('pages',['slug'=>'/abtreibungsfolgen-oeffentlich-machen'],['uid'=>'24']);
-$dbTarget->update('pages',['slug'=>'/petition-kreuz-bleibt'],['uid'=>'22']);
-$dbTarget->update('pages',['slug'=>'/testseite'],['uid'=>'26']);
-$dbTarget->update('pages',['slug'=>'/uni-fr-genderismus-nein'],['uid'=>'14']);
-$dbTarget->update('pages',['slug'=>'/medienmitteilungen'],['uid'=>'18']);
-$dbTarget->update('pages',['slug'=>'/links-gender-thema'],['uid'=>'17']);
-$dbTarget->update('pages',['slug'=>'/pressemitteilungen'],['uid'=>'6']);
-$dbTarget->update('pages',['slug'=>'/hier-unterzeichnen'],['uid'=>'4']);
-$dbTarget->update('pages',['slug'=>'/rechtliche-hinweise'],['uid'=>'13']);
-$dbTarget->update('pages',['slug'=>'/testseite-einbau-archivista-archiv-i-frame'],['uid'=>'34']);
-$dbTarget->update('pages',['slug'=>'/test-seite-flyer-ueberall-kartenansicht'],['uid'=>'32']);
-$dbTarget->update('pages',['slug'=>'/test-seite-flyer-ueberall-i-frame-suchen-und-warenkorb'],['uid'=>'33']);
-$dbTarget->update('pages',['hidden'=>'1'],['uid'=>'64']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$dbTarget->update('pages', ['slug' => '/inside-church-no-homo-network'], ['uid' => '31']);
+$dbTarget->update(
+    'pages',
+    ['slug' => '/petition-aux-conseil-federal-sensiblisez-le-public-aux-consequences-de-lavortement'],
+    ['uid' => '25'],
+);
+$dbTarget->update('pages', ['slug' => '/abtreibungsfolgen-oeffentlich-machen'], ['uid' => '24']);
+$dbTarget->update('pages', ['slug' => '/petition-kreuz-bleibt'], ['uid' => '22']);
+$dbTarget->update('pages', ['slug' => '/testseite'], ['uid' => '26']);
+$dbTarget->update('pages', ['slug' => '/uni-fr-genderismus-nein'], ['uid' => '14']);
+$dbTarget->update('pages', ['slug' => '/medienmitteilungen'], ['uid' => '18']);
+$dbTarget->update('pages', ['slug' => '/links-gender-thema'], ['uid' => '17']);
+$dbTarget->update('pages', ['slug' => '/pressemitteilungen'], ['uid' => '6']);
+$dbTarget->update('pages', ['slug' => '/hier-unterzeichnen'], ['uid' => '4']);
+$dbTarget->update('pages', ['slug' => '/rechtliche-hinweise'], ['uid' => '13']);
+$dbTarget->update('pages', ['slug' => '/testseite-einbau-archivista-archiv-i-frame'], ['uid' => '34']);
+$dbTarget->update('pages', ['slug' => '/test-seite-flyer-ueberall-kartenansicht'], ['uid' => '32']);
+$dbTarget->update('pages', ['slug' => '/test-seite-flyer-ueberall-i-frame-suchen-und-warenkorb'], ['uid' => '33']);

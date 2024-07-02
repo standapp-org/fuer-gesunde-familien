@@ -33,23 +33,6 @@
                                 <f:if condition="{item.current}"> <span class="visually-hidden">({f:translate(key: 'navigation.link.screenreader.current', extensionName: 'bootstrap_package')})</span></f:if>
                             </span>
                         </a>
-                        <f:if condition="{item.children}">
-                            <button
-                                type="button"
-                                id="nav-toggle-{item.data.uid}"
-                                class="nav-link nav-link-toggle"
-                                data-bs-toggle="dropdown"
-                                data-bs-display="static"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                >
-                                <span class="nav-link-indicator" aria-hidden="true"></span>
-                                <span class="nav-link-text visually-hidden text-white">Submenu for "{item.title}"</span>
-                            </button>
-                        </f:if>
-                        <div class="dropdown-menu{f:if(condition: item.children, then:' dropdown-menu-{dropdownStyle}')}">
-                            <f:render partial="Navigation/MainNavigationDropDown" arguments="{data: data, page: item, items: item.children, theme: theme}" />
-                        </div>
                     </li>
 
                 </f:else>
